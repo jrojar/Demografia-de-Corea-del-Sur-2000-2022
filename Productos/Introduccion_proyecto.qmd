@@ -1,6 +1,7 @@
 ---
-title: "Introduccion proyecto"
+title: "Introducción proyecto"
 format: html
 editor: visual
-lenguaje: ES
+author: "Javiera Rojas"
+lang: es
 ---
