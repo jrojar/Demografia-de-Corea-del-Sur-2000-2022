@@ -18,4 +18,3 @@ El objetivo de este proyecto es el conocer cómo se comporta la sociedad dentro 
 Este proyecto contará con distintas etapas para llegar a los resultados y conclusiones, donde en primera instancia se limpiará esta base de datos para no llegar a resultados con cierto sesgo por datos mal ingresados, para luego trabajar con ellos por medio de gráficos y tablas que se crearán para analizar las tendencias y progreso del número de aspectos y el número de muertes, nacimientos, etc. En tanto como país como en algunas ciudades importantes de este; y al mismo tiempo ver el contexto en que se encontraba el mundo y Corea, para finalmente concluir y descubrir si existe alguna tendencia con ciertos eventos que podrían no solo haber afectado a Corea, sino a otros países para estar alerta si es que sucede tal hecho o similar en el mundo y anticiparse, viendo así si es que este afecta negativamente.
 
 \
-
