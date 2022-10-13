@@ -5,6 +5,7 @@ editor: visual
 author: "Javiera Rojas"
 lang: es
 theme: litera
+title-block-author-single: "Autora"
 ---
 
 Podemos considerar al mundo como un rompecabezas donde las piezas están compuestas por los continentes y que además cada uno de ellos poseen otras piezas que son los países, pues este rompecabezas no solo se puede decir que las piezas encajan a la perfección, sino que se puede ir más allá, es decir que económicamente y funcionalmente trabajan en conjunto, tanto por los tratados que existen entre cada uno de ellos, las relaciones internacionales, entre otras razones. Hoy algunos países son mucho más importantes que otros por su dimensión territorial, pero más imponente por su poder económico, poder político y sus avances sobre la sociedad o habitantes. Una pieza del mundo que influye en esto o cuenta con estas características es el continente asiático, que cuenta con avances tecnológicos y donde la sociedad se ve influenciada con gran poder en esto, pero sin perder sus raíces antiguas: uno de los países que destaca corresponde a Corea del Sur, que luego de su separación de Corea del Norte, la urbanización impactó fuertemente en su sociedad, sobre todo los más jóvenes, que desde regiones se movilizaban a la ciudad con tal de obtener mejores oportunidades. También es considerado como una gran potencia económica, con un gran indicador del valor de la vida (PIB) y por su densidad poblacional. 
