@@ -20,4 +20,354 @@ El objetivo de este proyecto es el conocer cómo se comporta la sociedad dentro 
 
 Este proyecto contará con distintas etapas para llegar a los resultados y conclusiones, donde en primera instancia se limpiará esta base de datos para no llegar a resultados con cierto sesgo por datos mal ingresados, para luego trabajar con ellos por medio de gráficos y tablas que se crearán para analizar las tendencias y progreso del número de aspectos y el número de muertes, nacimientos, etc. En tanto como país como en algunas ciudades importantes de este; y al mismo tiempo ver el contexto en que se encontraba el mundo y Corea, para finalmente concluir y descubrir si existe alguna tendencia con ciertos eventos que podrían no solo haber afectado a Corea, sino a otros países para estar alerta si es que sucede tal hecho o similar en el mundo y anticiparse, viendo así si es que este afecta negativamente.
 
-\
+# Desarrollo: Gráficos y tablas
+
+Como se menciono anteriormente los recursos y proceso de este proyecto junto con esto a continuacion se presentara una breve tabla descriptiva de las variables que contiene esta base de datos con la que se trabajara en las etapas del estudio.
+
+```{r,echo=FALSE,include=FALSE}
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(forcats) 
+library(tidyverse) 
+library(stringr)   
+library(rebus) 
+library(gt)
+library(gtsummary)
+datos_demografia <- read_csv("/Users/javie/OneDrive/Escritorio/Proyecto/Datos/Korean_demographics_2000-2022.csv")
+```
+
+```{r, echo=FALSE}
+
+desp <- datos_demografia[1:13] 
+data.frame(Variables = names(desp), 
+           Tipo = c(class(desp$Fecha),
+                    class(desp$Region),
+                    class(desp$Nacimientos),
+                    class(desp$Tasa_de_nacimientos),
+                    class(desp$Falleciemientos),
+                    class(desp$Tasa_de_Falleciemientos),
+                    class(desp$Divorcios),
+                    class(desp$Tasa_de_divorcios),
+                    class(desp$Casamientos),
+                    class(desp$Tasa_de_casamientos),
+                    class(desp$Crecimiento_natural),
+                    class(desp$Tasa_de_crecimiento_natural),
+                    class(desp$Año)),
+           Descripción = c("Indicación del año, mes y día en que se registraron los datos",
+                           "Ciudad de Corea del Sur",
+                           "Cantidad de recien nacidos",
+                           "Número de nacimientos por cada mil habitantes en un año",
+                           "Cantidad de muertes",
+                           "Número de muertes por cada mil habitantes en un año ",
+                           "Cantidad de disolución legal de un matrimonio",
+                           "Número de divorcios por cada mil habitantes durante un año",
+                           "Cantidad de uniones de dos personas mediante  formalidades legales",
+                           "Número de casamientos por cada mil habitantes durante un año",
+                           "Diferencia entre el número de nacimientos y el número de defunciones de una población en un determinado tiempo",
+                           "Es el crecimiento o disminución natural expresado en términos relativos al tamaño de la población",
+                           "Corresponde al año de la fecha en que se registraron los datos") )%>%
+  gt()%>%
+  tab_header(title = "Descripción de variables a trabajar")
+```
+
+Como podemos ver tenemos distintas variables donde en su mayoria son de tipo numerico, pues nos enfocaremos en las tasas y el año de cada registro.
+
+Seguidamente presentaremos los graficos de la evolucion de cada tasa durante los año 2000 hasta 2022, para esto elegiremos las ciudades o regiones con mayor poblacion del pais a trabajar las cuales son:
+
+###### Grafico 1
+
+```{r,echo=FALSE}
+S <-datos_demografia %>% 
+  filter(Region %in% "Seoul" ) %>% 
+  aggregate(Tasa_de_nacimientos~Año, FUN = mean)
+
+S$Region = rep("Seoul",23)
+
+b <-datos_demografia %>% 
+  filter(Region %in% "Busan" ) %>% 
+  aggregate(Tasa_de_nacimientos~Año, FUN = mean)
+
+b$Region = rep("Busan",23)
+
+i <-datos_demografia %>% 
+  filter(Region %in% "Incheon" ) %>% 
+  aggregate(Tasa_de_nacimientos~Año , FUN = mean)
+
+i$Region = rep("Incheon",23)
+
+d <-datos_demografia %>% 
+  filter(Region %in% "Daegu" ) %>% 
+  aggregate(Tasa_de_nacimientos~Año, FUN = mean)
+  
+d$Region = rep("Daegu",23)
+
+
+d2<-datos_demografia %>% 
+  filter(Region %in% "Daejeon" ) %>% 
+  aggregate(Tasa_de_nacimientos~Año, FUN = mean)
+d2$Region = rep("Daejeon",23)
+
+datos2<-rbind(S,b,i,d,d2)
+datos2<-data.frame(datos2)
+
+
+#grafico
+paises <-c("Seoul" = "#052F61" ,  "Busan" = "#CE6633"  , "Incheon" = "#A50E82", "Daegu" = "#6A9E1F","Daejeon" = "#E87D37" )
+
+datos2|>
+  filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
+                       "Daegu" ,  "Daejeon" ))|>
+  ggplot(aes(x = Año, y= Tasa_de_nacimientos,color = Region))+
+  labs(title="Evolución de la tasa de nacimientos en regiones de Corea del Sur durante 2000 y 2022",x = NULL,
+       y = "Tasa de nacimiento")+
+  scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
+  ylim(c(0,14)) + 
+  geom_line( size = 1)+
+  geom_point(size = 2) +
+  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
+  scale_color_manual(values = paises) 
+
+```
+
+###### Grafico 2
+
+```{r,echo=FALSE}
+S3 <-datos_demografia %>% 
+  filter(Region %in% "Seoul" ) %>% 
+  aggregate(Tasa_de_Falleciemientos~Año, FUN = mean)
+
+S3$Region = rep("Seoul",23)
+
+b3 <-datos_demografia %>% 
+  filter(Region %in% "Busan" ) %>% 
+  aggregate(Tasa_de_Falleciemientos~Año, FUN = mean)
+
+b3$Region = rep("Busan",23)
+
+i3 <-datos_demografia %>% 
+  filter(Region %in% "Incheon" ) %>% 
+  aggregate(Tasa_de_Falleciemientos~Año , FUN = mean)
+
+i3$Region = rep("Incheon",23)
+
+d3 <-datos_demografia %>% 
+  filter(Region %in% "Daegu" ) %>% 
+  aggregate(Tasa_de_Falleciemientos~Año, FUN = mean)
+
+d3$Region = rep("Daegu",23)
+
+d23<-datos_demografia %>% 
+  filter(Region %in% "Daejeon" ) %>% 
+  aggregate(Tasa_de_Falleciemientos~Año, FUN = mean)
+d23$Region = rep("Daejeon",23)
+
+datos3<-rbind(S3,b3,i3,d3,d23)
+datos3<-data.frame(datos3)
+
+
+
+#grafico
+paises <-c("Seoul" = "#052F61" ,  "Busan" = "#CE6633"  , "Incheon" = "#A50E82", "Daegu" = "#6A9E1F","Daejeon" = "#E87D37" )
+
+datos3|>
+  filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
+                       "Daegu" ,  "Daejeon" ))|>
+  ggplot(aes(x = Año, y= Tasa_de_Falleciemientos,color = Region))+
+  labs(title="Evolución de la tasa de fallecimientos en regiones de Corea del Sur durante 2000 y 2022",x = NULL,
+       y = "Tasa de fallecimientos")+
+  scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
+  ylim(c(0,10)) + 
+  geom_line( size = 1)+
+  geom_point(size = 2) +
+  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
+  scale_color_manual(values = paises) 
+```
+
+###### Grafico 3
+
+```{r,echo=FALSE}
+S4 <-datos_demografia %>% 
+  filter(Region %in% "Seoul" ) %>% 
+  aggregate(Tasa_de_divorcios~Año, FUN = mean)
+
+S4$Region = rep("Seoul",23)
+
+b4 <-datos_demografia %>% 
+  filter(Region %in% "Busan" ) %>% 
+  aggregate(Tasa_de_divorcios~Año, FUN = mean)
+
+b4$Region = rep("Busan",23)
+
+i4 <-datos_demografia %>% 
+  filter(Region %in% "Incheon" ) %>% 
+  aggregate(Tasa_de_divorcios~Año , FUN = mean)
+
+i4$Region = rep("Incheon",23)
+
+d4 <-datos_demografia %>% 
+  filter(Region %in% "Daegu" ) %>% 
+  aggregate(Tasa_de_divorcios~Año, FUN = mean)
+
+d4$Region = rep("Daegu",23)
+
+d24<-datos_demografia %>% 
+  filter(Region %in% "Daejeon" ) %>% 
+  aggregate(Tasa_de_divorcios~Año, FUN = mean)
+d24$Region = rep("Daejeon",23)
+
+datos4<-rbind(S4,b4,i4,d4,d24)
+datos4<-data.frame(datos4)
+
+
+
+#grafico
+paises <-c("Seoul" = "#052F61" ,  "Busan" = "#CE6633"  , "Incheon" = "#A50E82", "Daegu" = "#6A9E1F","Daejeon" = "#E87D37" )
+
+datos4|>
+  filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
+                       "Daegu" ,  "Daejeon" ))|>
+  ggplot(aes(x = Año, y= Tasa_de_divorcios,color = Region))+
+  labs(title="Evolución de la tasa de divorcios en regiones de Corea del Sur durante 2000 y 2022",x = NULL,
+       y = "Tasa de divorcios")+
+  scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
+  ylim(c(0,5)) + 
+  geom_line( size = 1)+
+  geom_point(size = 2) +
+  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
+  scale_color_manual(values = paises) 
+```
+
+###### Grafico 4
+
+```{r,echo=FALSE}
+S5 <-datos_demografia %>% 
+  filter(Region %in% "Seoul" ) %>% 
+  aggregate(Tasa_de_casamientos~Año, FUN = mean)
+
+S5$Region = rep("Seoul",23)
+
+b5 <-datos_demografia %>% 
+  filter(Region %in% "Busan" ) %>% 
+  aggregate(Tasa_de_casamientos~Año, FUN = mean)
+
+b5$Region = rep("Busan",23)
+
+i5 <-datos_demografia %>% 
+  filter(Region %in% "Incheon" ) %>% 
+  aggregate(Tasa_de_casamientos~Año , FUN = mean)
+
+i5$Region = rep("Incheon",23)
+
+d5 <-datos_demografia %>% 
+  filter(Region %in% "Daegu" ) %>% 
+  aggregate(Tasa_de_casamientos~Año, FUN = mean)
+
+d5$Region = rep("Daegu",23)
+
+
+d25<-datos_demografia %>% 
+  filter(Region %in% "Daejeon" ) %>% 
+  aggregate(Tasa_de_casamientos~Año, FUN = mean)
+d25$Region = rep("Daejeon",23)
+
+datos5<-rbind(S5,b5,i5,d5,d25)
+datos5<-data.frame(datos5)
+
+
+#grafico
+paises <-c("Seoul" = "#052F61" ,  "Busan" = "#CE6633"  , "Incheon" = "#A50E82", "Daegu" = "#6A9E1F","Daejeon" = "#E87D37" )
+
+datos5|>
+  filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
+                       "Daegu" ,  "Daejeon" ))|>
+  ggplot(aes(x = Año, y= Tasa_de_casamientos,color = Region))+
+  labs(title="Evolución de la tasa de casamientos en regiones de Corea del Sur durante 2000 y 2022",x = NULL,y = "Tasa de casamientos")+
+  scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
+  ylim(c(0,8)) + 
+  geom_line( size = 1)+
+  geom_point(size = 2) +
+  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
+  scale_color_manual(values = paises) 
+```
+
+###### Grafico 5
+
+```{r,echo=FALSE}
+S6 <-datos_demografia %>% 
+  filter(Region %in% "Seoul" ) %>% 
+  aggregate(Tasa_de_crecimiento_natural~Año, FUN = mean)
+
+S6$Region = rep("Seoul",23)
+
+b6 <-datos_demografia %>% 
+  filter(Region %in% "Busan" ) %>% 
+  aggregate(Tasa_de_crecimiento_natural~Año, FUN = mean)
+
+b6$Region = rep("Busan",23)
+
+i6 <-datos_demografia %>% 
+  filter(Region %in% "Incheon" ) %>% 
+  aggregate(Tasa_de_crecimiento_natural~Año , FUN = mean)
+
+i6$Region = rep("Incheon",23)
+
+d6 <-datos_demografia %>% 
+  filter(Region %in% "Daegu" ) %>% 
+  aggregate(Tasa_de_crecimiento_natural~Año, FUN = mean)
+
+d6$Region = rep("Daegu",23)
+
+d26<-datos_demografia %>% 
+  filter(Region %in% "Daejeon" ) %>% 
+  aggregate(Tasa_de_crecimiento_natural~Año, FUN = mean)
+d26$Region = rep("Daejeon",23)
+
+datos6<-rbind(S6,b6,i6,d6,d26)
+datos6<-data.frame(datos6)
+
+
+
+#grafico
+paises <-c("Seoul" = "#052F61" ,  "Busan" = "#CE6633"  , "Incheon" = "#A50E82", "Daegu" = "#6A9E1F","Daejeon" = "#E87D37" )
+
+datos6|>
+  filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
+                       "Daegu" ,  "Daejeon" ))|>
+  ggplot(aes(x = Año, y= Tasa_de_crecimiento_natural,color = Region))+
+  labs(title="Evolución de la tasa de crecimiento natural en regiones de Corea del Sur durante 2000 y 2022",x = NULL,y = "Tasa de crecimiento natural")+
+  scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
+  ylim(c(-10,12)) + 
+  geom_line( size = 1)+
+  geom_point(size = 2) +
+  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
+  scale_color_manual(values = paises) 
+```
+
+Al observar si no enfocamos en el grafico........\
+
+Como vimos anterioremente se puede ver un analisis durante los ultimos 22 años sobre que a pasado en al demografia de Corea y su variacion, pero ¿Como se vio afectado este pais socialmente duante la pandemia?¿Habra afectado como lo hizo en otros paises con los numero sde naciemeientos y muertes?. Para responder esta pregunta mostraremso una tabla que incluye el promedio de cada una de las tasas en el correspondiente año por cada region de Corea.
+
+```{r,echo=FALSE}
+inicio <- "2019"
+final <- "2022"
+
+# juntar datos entre los años
+
+  
+datosf <- cbind(datos2,datos3[2],datos4[2],datos5[2],datos6[2])
+datosf <- data.frame(datosf)
+
+datosf%>%
+  filter(Año >= inicio & Año <= final)%>%
+  gt(groupname_col = "Region",rowname_col = "Año") %>%
+  tab_header(title = "Tasas durante la pandemia en regiones de Corea del Sur")%>%
+  #tab_row_group(label = "Region")
+  fmt_number(columns = Año,decimals = 0,use_seps = FALSE)%>%
+  tab_options(row_group.background.color = "#F8BBD0") %>%
+  tab_spanner(label = "Tasas",columns = c("Tasa_de_nacimientos",
+                                          "Tasa_de_Falleciemientos",
+                                          "Tasa_de_divorcios",
+                                          "Tasa_de_casamientos",
+                                          "Tasa_de_crecimiento_natural"))
+```

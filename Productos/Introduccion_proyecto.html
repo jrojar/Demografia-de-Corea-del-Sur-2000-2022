@@ -68,8 +68,1103 @@ ul.task-list{list-style: none;}
 <p>Es por esto que se analizará y se trabajará con una base de datos de Corea del Sur, que almacena los datos de los últimos 20 años de cómo ha evolucionado por ciudad algunos aspectos como el número de muertes, nacimientos, divorcios, entre otros aspectos, teniendo en consideración los eventos importantes que han ocurrido en este periodo de tiempo, dentro de este mismo país como mundialmente. Desde aquí se tratará de ver cómo algunos hechos históricos, tanto de tipo económico como relación entre países, afecta a la sociedad, tal como la toma de decisiones de sus vidas; lo que involucra el tener hijos, formalizar una relación, tasa de crecimiento o incluso el acabar con su vida, en el caso extremo.</p>
 <p>El objetivo de este proyecto es el conocer cómo se comporta la sociedad dentro de un amplio período de tiempo y cómo ha evolucionado la demografía de este, enfocándonos en una potencia mundial como Corea.&nbsp;</p>
 <p>Este proyecto contará con distintas etapas para llegar a los resultados y conclusiones, donde en primera instancia se limpiará esta base de datos para no llegar a resultados con cierto sesgo por datos mal ingresados, para luego trabajar con ellos por medio de gráficos y tablas que se crearán para analizar las tendencias y progreso del número de aspectos y el número de muertes, nacimientos, etc. En tanto como país como en algunas ciudades importantes de este; y al mismo tiempo ver el contexto en que se encontraba el mundo y Corea, para finalmente concluir y descubrir si existe alguna tendencia con ciertos eventos que podrían no solo haber afectado a Corea, sino a otros países para estar alerta si es que sucede tal hecho o similar en el mundo y anticiparse, viendo así si es que este afecta negativamente.</p>
-<p><br>
+</section>
+<section id="desarrollo-gráficos-y-tablas" class="level1">
+<h1>Desarrollo: Gráficos y tablas</h1>
+<p>Como se menciono anteriormente los recursos y proceso de este proyecto junto con esto a continuacion se presentara una breve tabla descriptiva de las variables que contiene esta base de datos con la que se trabajara en las etapas del estudio.</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="zxxkvwdncy" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#zxxkvwdncy .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#zxxkvwdncy .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zxxkvwdncy .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#zxxkvwdncy .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#zxxkvwdncy .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zxxkvwdncy .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zxxkvwdncy .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#zxxkvwdncy .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#zxxkvwdncy .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#zxxkvwdncy .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#zxxkvwdncy .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#zxxkvwdncy .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#zxxkvwdncy .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#zxxkvwdncy .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#zxxkvwdncy .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#zxxkvwdncy .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#zxxkvwdncy .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zxxkvwdncy .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#zxxkvwdncy .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#zxxkvwdncy .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zxxkvwdncy .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#zxxkvwdncy .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#zxxkvwdncy .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zxxkvwdncy .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zxxkvwdncy .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#zxxkvwdncy .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#zxxkvwdncy .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zxxkvwdncy .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zxxkvwdncy .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zxxkvwdncy .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zxxkvwdncy .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zxxkvwdncy .gt_left {
+  text-align: left;
+}
+
+#zxxkvwdncy .gt_center {
+  text-align: center;
+}
+
+#zxxkvwdncy .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#zxxkvwdncy .gt_font_normal {
+  font-weight: normal;
+}
+
+#zxxkvwdncy .gt_font_bold {
+  font-weight: bold;
+}
+
+#zxxkvwdncy .gt_font_italic {
+  font-style: italic;
+}
+
+#zxxkvwdncy .gt_super {
+  font-size: 65%;
+}
+
+#zxxkvwdncy .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#zxxkvwdncy .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#zxxkvwdncy .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#zxxkvwdncy .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#zxxkvwdncy .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#zxxkvwdncy .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#zxxkvwdncy .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Descripción de variables a trabajar</td>
+    </tr>
+    
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Variables</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Tipo</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Descripción</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Fecha</td>
+<td class="gt_row gt_left">Date</td>
+<td class="gt_row gt_left">Indicación del año, mes y día en que se registraron los datos</td></tr>
+    <tr><td class="gt_row gt_left">Region</td>
+<td class="gt_row gt_left">character</td>
+<td class="gt_row gt_left">Ciudad de Corea del Sur</td></tr>
+    <tr><td class="gt_row gt_left">Nacimientos</td>
+<td class="gt_row gt_left">numeric</td>
+<td class="gt_row gt_left">Cantidad de recien nacidos</td></tr>
+    <tr><td class="gt_row gt_left">Tasa_de_nacimientos</td>
+<td class="gt_row gt_left">numeric</td>
+<td class="gt_row gt_left">Número de nacimientos por cada mil habitantes en un año</td></tr>
+    <tr><td class="gt_row gt_left">Falleciemientos</td>
+<td class="gt_row gt_left">numeric</td>
+<td class="gt_row gt_left">Cantidad de muertes</td></tr>
+    <tr><td class="gt_row gt_left">Tasa_de_Falleciemientos</td>
+<td class="gt_row gt_left">numeric</td>
+<td class="gt_row gt_left">Número de muertes por cada mil habitantes en un año </td></tr>
+    <tr><td class="gt_row gt_left">Divorcios</td>
+<td class="gt_row gt_left">numeric</td>
+<td class="gt_row gt_left">Cantidad de disolución legal de un matrimonio</td></tr>
+    <tr><td class="gt_row gt_left">Tasa_de_divorcios</td>
+<td class="gt_row gt_left">numeric</td>
+<td class="gt_row gt_left">Número de divorcios por cada mil habitantes durante un año</td></tr>
+    <tr><td class="gt_row gt_left">Casamientos</td>
+<td class="gt_row gt_left">numeric</td>
+<td class="gt_row gt_left">Cantidad de uniones de dos personas mediante  formalidades legales</td></tr>
+    <tr><td class="gt_row gt_left">Tasa_de_casamientos</td>
+<td class="gt_row gt_left">numeric</td>
+<td class="gt_row gt_left">Número de casamientos por cada mil habitantes durante un año</td></tr>
+    <tr><td class="gt_row gt_left">Crecimiento_natural</td>
+<td class="gt_row gt_left">numeric</td>
+<td class="gt_row gt_left">Diferencia entre el número de nacimientos y el número de defunciones de una población en un determinado tiempo</td></tr>
+    <tr><td class="gt_row gt_left">Tasa_de_crecimiento_natural</td>
+<td class="gt_row gt_left">numeric</td>
+<td class="gt_row gt_left">Es el crecimiento o disminución natural expresado en términos relativos al tamaño de la población</td></tr>
+    <tr><td class="gt_row gt_left">Año</td>
+<td class="gt_row gt_left">numeric</td>
+<td class="gt_row gt_left">Corresponde al año de la fecha en que se registraron los datos</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p>Como podemos ver tenemos distintas variables donde en su mayoria son de tipo numerico, pues nos enfocaremos en las tasas y el año de cada registro.</p>
+<p>Seguidamente presentaremos los graficos de la evolucion de cada tasa durante los año 2000 hasta 2022, para esto elegiremos las ciudades o regiones con mayor poblacion del pais a trabajar las cuales son:</p>
+<section id="grafico-1" class="level6">
+<h6 class="anchored" data-anchor-id="grafico-1">Grafico 1</h6>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1 row(s) containing missing values (geom_path).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Introduccion_proyecto_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="grafico-2" class="level6">
+<h6 class="anchored" data-anchor-id="grafico-2">Grafico 2</h6>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Introduccion_proyecto_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="grafico-3" class="level6">
+<h6 class="anchored" data-anchor-id="grafico-3">Grafico 3</h6>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Introduccion_proyecto_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="grafico-4" class="level6">
+<h6 class="anchored" data-anchor-id="grafico-4">Grafico 4</h6>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Introduccion_proyecto_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="grafico-5" class="level6">
+<h6 class="anchored" data-anchor-id="grafico-5">Grafico 5</h6>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Introduccion_proyecto_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Al observar si no enfocamos en el grafico……..<br>
 </p>
+<p>Como vimos anterioremente se puede ver un analisis durante los ultimos 22 años sobre que a pasado en al demografia de Corea y su variacion, pero ¿Como se vio afectado este pais socialmente duante la pandemia?¿Habra afectado como lo hizo en otros paises con los numero sde naciemeientos y muertes?. Para responder esta pregunta mostraremso una tabla que incluye el promedio de cada una de las tasas en el correspondiente año por cada region de Corea.</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="ofvhdwdkkg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#ofvhdwdkkg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ofvhdwdkkg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ofvhdwdkkg .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ofvhdwdkkg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ofvhdwdkkg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ofvhdwdkkg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ofvhdwdkkg .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ofvhdwdkkg .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ofvhdwdkkg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ofvhdwdkkg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ofvhdwdkkg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ofvhdwdkkg .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #F8BBD0;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ofvhdwdkkg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #F8BBD0;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ofvhdwdkkg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ofvhdwdkkg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ofvhdwdkkg .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ofvhdwdkkg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ofvhdwdkkg .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ofvhdwdkkg .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ofvhdwdkkg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ofvhdwdkkg .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#ofvhdwdkkg .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ofvhdwdkkg .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ofvhdwdkkg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ofvhdwdkkg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ofvhdwdkkg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ofvhdwdkkg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ofvhdwdkkg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ofvhdwdkkg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ofvhdwdkkg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ofvhdwdkkg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ofvhdwdkkg .gt_left {
+  text-align: left;
+}
+
+#ofvhdwdkkg .gt_center {
+  text-align: center;
+}
+
+#ofvhdwdkkg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ofvhdwdkkg .gt_font_normal {
+  font-weight: normal;
+}
+
+#ofvhdwdkkg .gt_font_bold {
+  font-weight: bold;
+}
+
+#ofvhdwdkkg .gt_font_italic {
+  font-style: italic;
+}
+
+#ofvhdwdkkg .gt_super {
+  font-size: 65%;
+}
+
+#ofvhdwdkkg .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#ofvhdwdkkg .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ofvhdwdkkg .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ofvhdwdkkg .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ofvhdwdkkg .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ofvhdwdkkg .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ofvhdwdkkg .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <td colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Tasas durante la pandemia en regiones de Corea del Sur</td>
+    </tr>
+    
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col"></th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="5" scope="colgroup">
+        <span class="gt_column_spanner">Tasas</span>
+      </th>
+    </tr>
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Tasa_de_nacimientos</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Tasa_de_Falleciemientos</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Tasa_de_divorcios</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Tasa_de_casamientos</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Tasa_de_crecimiento_natural</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <td colspan="6" class="gt_group_heading">Seoul</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_right gt_stub">2019</th>
+<td class="gt_row gt_right">5.608333</td>
+<td class="gt_row gt_right">4.583333</td>
+<td class="gt_row gt_right">1.783333</td>
+<td class="gt_row gt_right">5.033333</td>
+<td class="gt_row gt_right">1.0250000</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2020</th>
+<td class="gt_row gt_right">4.975000</td>
+<td class="gt_row gt_right">4.783333</td>
+<td class="gt_row gt_right">1.708333</td>
+<td class="gt_row gt_right">4.708333</td>
+<td class="gt_row gt_right">0.2000000</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2021</th>
+<td class="gt_row gt_right">4.800000</td>
+<td class="gt_row gt_right">5.166667</td>
+<td class="gt_row gt_right">1.583333</td>
+<td class="gt_row gt_right">3.908333</td>
+<td class="gt_row gt_right">-0.3416667</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2022</th>
+<td class="gt_row gt_right">4.700000</td>
+<td class="gt_row gt_right">6.183333</td>
+<td class="gt_row gt_right">1.416667</td>
+<td class="gt_row gt_right">3.700000</td>
+<td class="gt_row gt_right">-1.5166667</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="6" class="gt_group_heading">Busan</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_right gt_stub">2019</th>
+<td class="gt_row gt_right">5.041667</td>
+<td class="gt_row gt_right">6.575000</td>
+<td class="gt_row gt_right">2.008333</td>
+<td class="gt_row gt_right">4.075000</td>
+<td class="gt_row gt_right">-1.5416667</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2020</th>
+<td class="gt_row gt_right">4.491667</td>
+<td class="gt_row gt_right">6.816667</td>
+<td class="gt_row gt_right">1.925000</td>
+<td class="gt_row gt_right">3.591667</td>
+<td class="gt_row gt_right">-2.3500000</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2021</th>
+<td class="gt_row gt_right">4.308333</td>
+<td class="gt_row gt_right">7.025000</td>
+<td class="gt_row gt_right">1.891667</td>
+<td class="gt_row gt_right">3.316667</td>
+<td class="gt_row gt_right">-2.7083333</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2022</th>
+<td class="gt_row gt_right">4.500000</td>
+<td class="gt_row gt_right">8.833333</td>
+<td class="gt_row gt_right">1.650000</td>
+<td class="gt_row gt_right">3.283333</td>
+<td class="gt_row gt_right">-4.3500000</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="6" class="gt_group_heading">Incheon</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_right gt_stub">2019</th>
+<td class="gt_row gt_right">6.333333</td>
+<td class="gt_row gt_right">5.166667</td>
+<td class="gt_row gt_right">2.441667</td>
+<td class="gt_row gt_right">4.575000</td>
+<td class="gt_row gt_right">1.1583333</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2020</th>
+<td class="gt_row gt_right">5.491667</td>
+<td class="gt_row gt_right">5.366667</td>
+<td class="gt_row gt_right">2.366667</td>
+<td class="gt_row gt_right">3.966667</td>
+<td class="gt_row gt_right">0.1166667</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2021</th>
+<td class="gt_row gt_right">5.125000</td>
+<td class="gt_row gt_right">5.641667</td>
+<td class="gt_row gt_right">2.316667</td>
+<td class="gt_row gt_right">3.725000</td>
+<td class="gt_row gt_right">-0.5166667</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2022</th>
+<td class="gt_row gt_right">5.116667</td>
+<td class="gt_row gt_right">6.866667</td>
+<td class="gt_row gt_right">1.983333</td>
+<td class="gt_row gt_right">3.583333</td>
+<td class="gt_row gt_right">-1.7500000</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="6" class="gt_group_heading">Daegu</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_right gt_stub">2019</th>
+<td class="gt_row gt_right">5.433333</td>
+<td class="gt_row gt_right">5.650000</td>
+<td class="gt_row gt_right">1.916667</td>
+<td class="gt_row gt_right">4.066667</td>
+<td class="gt_row gt_right">-0.2166667</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2020</th>
+<td class="gt_row gt_right">4.633333</td>
+<td class="gt_row gt_right">5.991667</td>
+<td class="gt_row gt_right">1.808333</td>
+<td class="gt_row gt_right">3.458333</td>
+<td class="gt_row gt_right">-1.3583333</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2021</th>
+<td class="gt_row gt_right">4.475000</td>
+<td class="gt_row gt_right">6.083333</td>
+<td class="gt_row gt_right">1.725000</td>
+<td class="gt_row gt_right">3.058333</td>
+<td class="gt_row gt_right">-1.6333333</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2022</th>
+<td class="gt_row gt_right">4.483333</td>
+<td class="gt_row gt_right">7.866667</td>
+<td class="gt_row gt_right">1.550000</td>
+<td class="gt_row gt_right">3.116667</td>
+<td class="gt_row gt_right">-3.3833333</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="6" class="gt_group_heading">Daejeon</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_right gt_stub">2019</th>
+<td class="gt_row gt_right">5.725000</td>
+<td class="gt_row gt_right">5.100000</td>
+<td class="gt_row gt_right">2.108333</td>
+<td class="gt_row gt_right">4.483333</td>
+<td class="gt_row gt_right">0.6250000</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2020</th>
+<td class="gt_row gt_right">5.116667</td>
+<td class="gt_row gt_right">5.191667</td>
+<td class="gt_row gt_right">2.058333</td>
+<td class="gt_row gt_right">4.100000</td>
+<td class="gt_row gt_right">-0.0500000</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2021</th>
+<td class="gt_row gt_right">5.108333</td>
+<td class="gt_row gt_right">5.466667</td>
+<td class="gt_row gt_right">1.908333</td>
+<td class="gt_row gt_right">3.733333</td>
+<td class="gt_row gt_right">-0.3500000</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2022</th>
+<td class="gt_row gt_right">5.333333</td>
+<td class="gt_row gt_right">6.683333</td>
+<td class="gt_row gt_right">1.683333</td>
+<td class="gt_row gt_right">3.933333</td>
+<td class="gt_row gt_right">-1.3500000</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</section>
 </section>
 
 </main>

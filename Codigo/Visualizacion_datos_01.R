@@ -7,7 +7,7 @@ library(tidyverse)
 library(stringr)   
 library(rebus) 
 library(gt)
-
+library(gtsummary)
 # Datos
 
 datos_demografia <- read_csv("Datos/Korean_demographics_2000-2022.csv")
@@ -66,7 +66,7 @@ datos2|>
   geom_point(size = 2) +
   theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
   scale_color_manual(values = paises) 
-  
+ggsave("Figuras/G_1-Tasa_de_nacimientos.png", width = 10, height = 7)  
 
 
 # Segundo grafico evolucion tasa de fallecimientos----
@@ -122,6 +122,7 @@ datos3|>
   geom_point(size = 2) +
   theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
   scale_color_manual(values = paises) 
+ggsave("Figuras/G_2-Tasa_de_fallecimientos.png", width = 10, height = 7)  
 
 
 # Tercer grafico evolucion tasa de divorcios----
@@ -174,6 +175,7 @@ datos4|>
   geom_point(size = 2) +
   theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
   scale_color_manual(values = paises) 
+ggsave("Figuras/G_3-Tasa_de_divorcios.png", width = 10, height = 7)  
 
 # Cuarto grafico evolucion tasa de casamientos----
 S5 <-datos_demografia %>% 
@@ -224,6 +226,7 @@ datos5|>
   geom_point(size = 2) +
   theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
   scale_color_manual(values = paises) 
+ggsave("Figuras/G_4-Tasa_de_casamientos.png", width = 10, height = 7)  
 
 
 # Quinto grafico evolucion de tasa de crecimiento natural-----
@@ -277,10 +280,46 @@ datos6|>
   theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
   scale_color_manual(values = paises) 
 
+ggsave("Figuras/G_5-Tasa_de_CN.png", width = 10, height = 7)  
 
 
 
-# Tablas especificamente entre 2019 y 2022 (PANDEMIA)----
+# Tabla presentacion de varibles----
+
+desp <- datos_demografia[1:13] 
+data.frame(Variables = names(desp), 
+           Tipo = c(class(desp$Fecha),
+                    class(desp$Region),
+                    class(desp$Nacimientos),
+                    class(desp$Tasa_de_nacimientos),
+                    class(desp$Falleciemientos),
+                    class(desp$Tasa_de_Falleciemientos),
+                    class(desp$Divorcios),
+                    class(desp$Tasa_de_divorcios),
+                    class(desp$Casamientos),
+                    class(desp$Tasa_de_casamientos),
+                    class(desp$Crecimiento_natural),
+                    class(desp$Tasa_de_crecimiento_natural),
+                    class(desp$Año)),
+           Descripción = c("Indicación del año, mes y día en que se registraron los datos",
+                           "Ciudad de Corea del Sur",
+                           "Cantidad de recien nacidos",
+                           "Número de nacimientos por cada mil habitantes en un año",
+                           "Cantidad de muertes",
+                           "Número de muertes por cada mil habitantes en un año ",
+                           "Cantidad de disolución legal de un matrimonio",
+                           "Número de divorcios por cada mil habitantes durante un año",
+                           "Cantidad de uniones de dos personas mediante  formalidades legales",
+                           "Número de casamientos por cada mil habitantes durante un año",
+                           "Diferencia entre el número de nacimientos y el número de defunciones de una población en un determinado tiempo",
+                           "Es el crecimiento o disminución natural expresado en términos relativos al tamaño de la población",
+                           "Corresponde al año de la fecha en que se registraron los datos") )%>%
+  gt()%>%
+  tab_header(title = "Descripción de variables a trabajar")
+
+
+
+# Tabla especificamente entre 2019 y 2022 (PANDEMIA)----
 
 inicio <- "2019"
 final <- "2022"
