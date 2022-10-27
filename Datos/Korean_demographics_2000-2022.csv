@@ -1,4 +1,4 @@
-Fecha,Region,Nacimientos,Tasa_de_nacimientos,Falleciemientos,Tasa_de_Falleciemientos,Divorcios,Tasa_de_divorcios,Casamientos,Tasa_de_casamientos,Crecimiento_natural,Tasa_de_crecimiento_natural,Año,,
+Fecha,Region,Nacimientos,Tasa_de_nacimientos,Fallecimientos,Tasa_de_Fallecimientos,Divorcios,Tasa_de_divorcios,Casamientos,Tasa_de_casamientos,Crecimiento_natural,Tasa_de_crecimiento_natural,Año,,
 2000-01-01,Busan,3752,11.61,1875,5.8,814,2.5,2435,7.5,1877,5.8,2000,TRUE,TRUE
 2000-01-01,Chungcheongbuk-do,1903,15.06,924,7.3,220,1.7,828,6.6,979,7.7,2000,TRUE,TRUE
 2000-01-01,Chungcheongnam-do,2398,14.75,1466,9,321,2,1055,6.5,932,5.7,2000,TRUE,TRUE

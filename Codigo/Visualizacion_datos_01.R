@@ -58,15 +58,16 @@ datos2|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_nacimientos,color = Region))+
-  labs(title="Evolución de la tasa de nacimientos en regiones de Corea del Sur durante 2000 y 2022",x = NULL,
-       y = "Tasa de nacimiento")+
+  labs(title="Evolución de tasas de nacimientos en regiones de Corea del Sur durante 2000-2022",x = NULL,
+       y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,14)) + 
   geom_line( size = 1)+
+  geom_vline(xintercept = c(c(2000,2002),c(2016,2020)),color = "red", linetype="dashed",size = 0.5)+
   geom_point(size = 2) +
-  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
-  scale_color_manual(values = paises) 
-ggsave("Figuras/G_1-Tasa_de_nacimientos.png", width = 10, height = 7)  
+  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom")+
+  scale_color_manual(values = paises)
+ggsave("Figuras/Grafico_01-Tasa_de_nacimientos.png", width = 10, height = 7)  
 
 
 # Segundo grafico evolucion tasa de fallecimientos----
@@ -75,36 +76,36 @@ ggsave("Figuras/G_1-Tasa_de_nacimientos.png", width = 10, height = 7)
 # generando tabla
 S3 <-datos_demografia %>% 
   filter(Region %in% "Seoul" ) %>% 
-  aggregate(Tasa_de_Falleciemientos~Año, FUN = mean)
+  aggregate(Tasa_de_Fallecimientos~Año, FUN = mean)
 
 S3$Region = rep("Seoul",23)
 
 b3 <-datos_demografia %>% 
   filter(Region %in% "Busan" ) %>% 
-  aggregate(Tasa_de_Falleciemientos~Año, FUN = mean)
+  aggregate(Tasa_de_Fallecimientos~Año, FUN = mean)
 
 b3$Region = rep("Busan",23)
 
 i3 <-datos_demografia %>% 
   filter(Region %in% "Incheon" ) %>% 
-  aggregate(Tasa_de_Falleciemientos~Año , FUN = mean)
+  aggregate(Tasa_de_Fallecimientos~Año , FUN = mean)
 
 i3$Region = rep("Incheon",23)
 
 d3 <-datos_demografia %>% 
   filter(Region %in% "Daegu" ) %>% 
-  aggregate(Tasa_de_Falleciemientos~Año, FUN = mean)
+  aggregate(Tasa_de_Fallecimientos~Año, FUN = mean)
 
 d3$Region = rep("Daegu",23)
 
 d23<-datos_demografia %>% 
   filter(Region %in% "Daejeon" ) %>% 
-  aggregate(Tasa_de_Falleciemientos~Año, FUN = mean)
+  aggregate(Tasa_de_Fallecimientos~Año, FUN = mean)
 d23$Region = rep("Daejeon",23)
 
-(datos3<-rbind(S3,b3,i3,d3,d23)) 
+datos3<-rbind(S3,b3,i3,d3,d23)
 datos3<-data.frame(datos3)
-View(datos3)
+
 
 
 #grafico
@@ -113,16 +114,16 @@ paises <-c("Seoul" = "#052F61" ,  "Busan" = "#CE6633"  , "Incheon" = "#A50E82", 
 datos3|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
-  ggplot(aes(x = Año, y= Tasa_de_Falleciemientos,color = Region))+
-  labs(title="Evolución de la tasa de fallecimientos en regiones de Corea del Sur durante 2000 y 2022",x = NULL,
-       y = "Tasa de fallecimientos")+
+  ggplot(aes(x = Año, y= Tasa_de_Fallecimientos,color = Region))+
+  labs(title="Evolución de tasas de fallecimientos en regiones de Corea del Sur durante 2000-2022",x = NULL,
+       y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,10)) + 
   geom_line( size = 1)+
   geom_point(size = 2) +
-  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
+  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom")+
   scale_color_manual(values = paises) 
-ggsave("Figuras/G_2-Tasa_de_fallecimientos.png", width = 10, height = 7)  
+ggsave("Figuras/Grafico_02-Tasa_de_fallecimientos.png", width = 10, height = 7)  
 
 
 # Tercer grafico evolucion tasa de divorcios----
@@ -167,15 +168,15 @@ datos4|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_divorcios,color = Region))+
-  labs(title="Evolución de la tasa de divorcios en regiones de Corea del Sur durante 2000 y 2022",x = NULL,
-       y = "Tasa de divorcios")+
+  labs(title="Evolución de tasas de divorcios en regiones de Corea del Sur durante 2000-2022",x = NULL,
+       y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,5)) + 
   geom_line( size = 1)+
   geom_point(size = 2) +
-  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
-  scale_color_manual(values = paises) 
-ggsave("Figuras/G_3-Tasa_de_divorcios.png", width = 10, height = 7)  
+  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom")+
+  scale_color_manual(values = paises)
+ggsave("Figuras/Grafico_03-Tasa_de_divorcios.png", width = 10, height = 7)  
 
 # Cuarto grafico evolucion tasa de casamientos----
 S5 <-datos_demografia %>% 
@@ -219,14 +220,14 @@ datos5|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_casamientos,color = Region))+
-  labs(title="Evolución de la tasa de casamientos en regiones de Corea del Sur durante 2000 y 2022",x = NULL,y = "Tasa de casamientos")+
+  labs(title="Evolución de tasas de casamientos en regiones de Corea del Sur durante 2000-2022",x = NULL,y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,8)) + 
   geom_line( size = 1)+
   geom_point(size = 2) +
-  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
+  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom")+
   scale_color_manual(values = paises) 
-ggsave("Figuras/G_4-Tasa_de_casamientos.png", width = 10, height = 7)  
+ggsave("Figuras/Grafico_04-Tasa_de_casamientos.png", width = 10, height = 7)  
 
 
 # Quinto grafico evolucion de tasa de crecimiento natural-----
@@ -277,10 +278,10 @@ datos6|>
   ylim(c(-10,12)) + 
   geom_line( size = 1)+
   geom_point(size = 2) +
-  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom",plot.title = element_text(hjust = 0.5))+
+  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom")+
   scale_color_manual(values = paises) 
 
-ggsave("Figuras/G_5-Tasa_de_CN.png", width = 10, height = 7)  
+ggsave("Figuras/Grafico_05-Tasa_de_CN.png", width = 10, height = 7)  
 
 
 
@@ -292,8 +293,8 @@ data.frame(Variables = names(desp),
                     class(desp$Region),
                     class(desp$Nacimientos),
                     class(desp$Tasa_de_nacimientos),
-                    class(desp$Falleciemientos),
-                    class(desp$Tasa_de_Falleciemientos),
+                    class(desp$Fallecimientos),
+                    class(desp$Tasa_de_Fallecimientos),
                     class(desp$Divorcios),
                     class(desp$Tasa_de_divorcios),
                     class(desp$Casamientos),
@@ -317,8 +318,6 @@ data.frame(Variables = names(desp),
   gt()%>%
   tab_header(title = "Descripción de variables a trabajar")
 
-
-
 # Tabla especificamente entre 2019 y 2022 (PANDEMIA)----
 
 inicio <- "2019"
@@ -338,7 +337,7 @@ datosf%>%
   fmt_number(columns = Año,decimals = 0,use_seps = FALSE)%>%
   tab_options(row_group.background.color = "#F8BBD0") %>%
   tab_spanner(label = "Tasas",columns = c("Tasa_de_nacimientos",
-                                          "Tasa_de_Falleciemientos",
+                                          "Tasa_de_Fallecimientos",
                                           "Tasa_de_divorcios",
                                           "Tasa_de_casamientos",
                                           "Tasa_de_crecimiento_natural"))
