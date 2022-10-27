@@ -10,21 +10,23 @@ title-block-author-single: "Autora"
 
 # Introducción
 
-Hoy algunos países del mundo son mucho más relevantes que sobre otros por tener aspectos como una gran dimensión territorial, poder económico y político y su organización sobre la sociedad. Una pieza del mundo que dispone con estas características y resalta es el continente asiático, que cuenta con, además de lo anterior, con avances tecnológicos y donde los habitantes se ve influenciados beneficiosamente por esto sin perder sus raíces antiguas. Un país a destacar que pertenece a este territorio y de gran importancia corresponde a Corea del Sur, que se puede calificar como un país con gran cantidad de habitantes, culturalmente conservador y con una gran economía actualmente. Pero si retrocedemos un par de años, esta potencia mundial era totalmente distinta a la que conocemos, pues no poseía un buen lugar en el ranking del PIB, no era un gran exportador y ni consumidor que llamara la atención, por lo que ha tenido una gran evolución en poco tiempo a un país desarrollado.\
-\
-Como vemos hoy su economía afecta con gran poder al mundo y que a media del paso de los años su influencia ha tomado gran valor; sin embargo, ahora sería interesante ver como ha evolucionado de manera social este país, ósea no solo en temas de su economía sino demográficos. Es por esto que nos plantearíamos las siguientes preguntas: ¿Qué ha pasado con la población en los últimos 20 años? ¿Han existido otros hechos que han provocado efectos en los nacimientos o muertes? ¿Los eventos dentro de un país influyen en la toma de decisiones como el casarse?. Es por esto que en este proyecto se abordará el responder estas preguntas a través de datos que nos ayudarán y completarán el saber si existen patrones que se han presentado en el último año. Donde con los resultados de las variables podemos interpretar como un hecho histórico afecta en la sociedad de un país.\
-\
-Con lo dicho anteriormente, los datos que se trabajará son de origen de una base de datos de la demografía de Corea del Sur, que almacena variables relativas a como han evolucionado por ciudad, algunos aspectos como el número de muertes, nacimientos, divorcios en los últimos 22 años, enfocándonos en cinco ciudades del país(las con más densidad poblacional). Con tal de identificar patrones demográficos de este país que han ocurrido, con tal descubrir si existe algún fenómeno que hayan afectado o provocaron desequilibrio en los patrones normales. Por ejemplo, se sabe que en 2001 se vio alterada la densidad por inmigración de habitantes de Corea del Norte, por lo que desde ahí hasta el 2022 es probable e interesante saber qué ha ocurrido luego de este hecho y como ha cambiado la densidad del país.\
-\
-El objetivo de este proyecto es el conocer cómo se comporta la sociedad dentro de un amplio período de tiempo y cómo ha evolucionado la demografía de este, enfocándonos en una potencia mundial como Corea. Donde luego de ver y obtener resultados a través de representaciones del comportamiento de las distintas variables, se analizaran el contexto histórico donde ocurrieron algunos patrones de estas.\
-\
-Este trabajo está dividido en cuatro secciones. En la primera se entregará contexto respecto a Corea del sur y el interés de su evolución demográfica en los últimos años. En segundo lugar, se describirán datos y variables para el análisis del trabajo. Luego, en la tercera se dará un análisis descriptivo de los patrones de las variables de interés contenidas en la base de datos y por último, en la cuarta sección se interpretarán los patrones o resultados de la sección anterior en función de fenómenos históricos que ocurrieron en el periodo que cubre la base de datos que ocuparemos.
+En la actualidad, algunos países del mundo son mucho más relevantes que otros por tener aspectos como una gran dimensión territorial, poder económico y político y la organización de su sociedad. Una pieza del mundo que dispone con estas características y resalta es el continente asiático, que cuenta con, además de lo anterior, avances tecnológicos, donde los habitantes se ven influenciados beneficiosamente por esto sin perder sus raíces antiguas. Un país a destacar, que pertenece a este territorio, corresponde a Corea del Sur, una de las características es su gran número de habitantes, su cultura conservadora y su gran economía. Si retrocedemos un par de años, esta potencia mundial era totalmente distinta a la que conocemos actualmente, pues no poseía un buen lugar en el ranking del PIB, no era un gran exportador, ni un importador que llamase la atención. Por ende, se puede afirmar que en muy poco tiempo, Corea del Sur es un país que ha logrado tener un gran crecimiento.
+
+Al día de hoy, se puede apreciar la influencia que tiene la economía de este país a nivel mundial. Sin embargo, también existen otros temas de gran interés, tales como el ámbito social y demográfico. Es por esto que es interesante analizar la evolución de Corea del Sur en estos temas, en base a las siguientes preguntas: ¿Qué ha pasado con la población en los últimos 20 años? ¿Han existido otros hechos que han tenido incidencia en la mortalidad y natalidad? ¿Los eventos dentro de un país influyen en la toma de decisiones personales. Como por ejemplo la de casarse? En este proyecto se intentará responder a estas preguntas a través del análisis de los datos obtenidos, los que serán de ayuda para conocer si es que durante este último año, se han presentados diversos patrones e interpretar cómo un hecho histórico afecta a la sociedad de un país.
+
+Con lo dicho anteriormente, los datos que se utilizarán pertenecen a una base de datos correspondiente a la demografía de Corea del Sur, la que almacena variables relativas a cómo han evolucionado a nivel regional, respecto a tópicos como el número de muertes, nacimientos, divorcios y casamientos en los últimos 22 años. Este reporte se enfocará en cinco ciudades con más densidad poblacional del país, con tal de identificar patrones demográficos de este país que han ocurrido, y de esta forma descubrir si existe algún fenómeno que haya afectado o provocaron desequilibrio en los patrones normales. Por ejemplo, se sabe que en 2001 se vió alterada la densidad por inmigración de habitantes de Corea del Norte, por lo que desde ahí hasta el 2022 es probable e interesante saber qué ha ocurrido luego de este hecho y cómo ha cambiado la densidad del país.
+
+El objetivo de este proyecto es conocer cómo se comporta la sociedad dentro de un amplio período de tiempo y cómo ha evolucionado la demografía de esta, enfocándose en una potencia mundial como lo es Corea del Sur. Luego de ver y obtener resultados a través de representaciones del comportamiento de distintas variables, se analizará el contexto histórico en que ocurrieron algunos de estos patrones.
+
+Este trabajo está dividido en cuatro secciones. En la primera se entregará contexto respecto a Corea del Sur y el interés de su evolución demográfica en los últimos años. En segundo lugar, se describirán datos y variables para el análisis del trabajo. Luego, en la tercera, se dará un análisis descriptivo de los patrones de las variables de interés contenidas en la base de datos. Por último, en la cuarta sección, se interpretarán los patrones o resultados de la sección anterior en función de fenómenos históricos que ocurrieron en el período que cubre la base de datos que ocuparemos.
 
 # Desarrollo
 
 ## Base de datos
 
-Como se mencionó anteriormente los recursos y proceso de este proyecto, junto con esto, a continuación se presentara una breve tabla descriptiva de las variables que contiene esta base de datos con la que se trabajara en las etapas del estudio.
+Debido a que se mencionó anteriormente los recursos y proceso de este proyecto, a continuación se presentará una breve tabla descriptiva de las variables que contiene la base de datos con la que se trabajará en las etapas del proyecto.
+
+Las columnas contiene el nombre de cada variable, su tipo y una breve descripción.
 
 ```{r,echo=FALSE,include=FALSE}
 library(readr)
@@ -73,15 +75,15 @@ data.frame(Variables = names(desp),
   tab_header(title = "Descripción de variables a trabajar")
 ```
 
-Como podemos ver tenemos distintas variables donde en su mayoría son de tipo numérico, pues nos enfocaremos en las tasas y el año de cada registro.
+Como podemos ver tenemos distintas variables donde en su mayoría son de tipo numérico.Pues nos enfocaremos en las tasas de naciemiento, fallecimientos, divorcios y matrimonio, y el año de cada registro.
 
 ## Gráficos y tablas
 
-Ya presentadas las variables con las que trabajaremos, ahora se expondran a traves de graficos y una tabla la evolucion de las variabels de interes durante los año 2000 hasta 2022. Para esto nos enfocaremso en as tasas, lo que quire decir que a continaicion prsentaremos cinco graficos donde cada uno presentara el progreso promedio de cada año en las ciudades o regiones con mayor poblacion del pais a trabajar las cuales son: Busan, Seúl, Incheon, Daegu y Daejeon.
+A continuacion con se expondrán a través de gráficos y una tabla la evolución de estas durante los años 2000 hasta 2022. Cada uno de los esquemas representará el progreso promedio de las tasas por cada año en las ciudades o regiones con mayor población del país a trabajar, las cuales son: Busan, Seúl, Incheon, Daegu y Daejeon.
 
-Como se dijio veremos la evolucion promedio de cada variable a taves de su tasa, como podemos ver la figura 1:
+Ahora, podemos ver la figura 1 la cual presenta la tasa de nacimiento:
 
-###### Grafico 1
+###### Gráfico 1
 
 ```{r,echo=FALSE,warning=FALSE}
 S <-datos_demografia %>% 
@@ -125,7 +127,7 @@ datos2|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_nacimientos,color = Region))+
-  labs(title="Evolución de tasas de nacimientos en regiones de Corea del Sur durante 2000-2022",x = NULL,
+  labs(title="Evolución de tasas de nacimientos en regiones de Corea del Sur en 2000-2022",x = NULL,
        y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,14)) + 
@@ -139,7 +141,7 @@ datos2|>
 
 Al observar le grafico podemos darnos cuenta de que no existe en general un equilibrio de la tasa de nacimiento, pero si se puede decir globalmente que en ambas regiones se presentan las mismas tendencias: aumentan en los mismos años y lo mismo sucede cuando disminuye esta tasa. Si nos fijamos entre 2001 y 2002 existe una disminución de la tasa de nacimientos pues se puede esperar esto por la lucha o guerra contra el terrorismo. Al igual que la disminución entre 2016 a 2020 esto se puede atribuir a cronológicamente a primero en 2016 ocurrió una crisis política a causa de la mandataria, luego de esto comenzó la tensión entre EE. UU. y corea del norte debido a la tensión entre sus presidentes por la supuesta guerra nuclear que se especulaba y la pandemia que comenzó en 2019, lo cual se puede predecir que las personas en consecuencia de circunstancias de incertidumbre sobre el futuro provocara que menos mujeres se sientan inseguras para ser madres.
 
-###### Grafico 2
+###### Gráfico 2
 
 ```{r,echo=FALSE,warning=FALSE}
 S3 <-datos_demografia %>% 
@@ -183,7 +185,7 @@ datos3|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_Fallecimientos,color = Region))+
-  labs(title="Evolución de tasas de fallecimientos en regiones de Corea del Sur durante 2000-2022",x = NULL,
+  labs(title="Evolución de tasas de fallecimientos en regiones de Corea del Sur en 2000-2022",x = NULL,
        y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,10)) + 
@@ -193,7 +195,7 @@ datos3|>
   scale_color_manual(values = paises) 
 ```
 
-###### Grafico 3
+###### Gráfico 3
 
 ```{r,echo=FALSE,warning=FALSE}
 S4 <-datos_demografia %>% 
@@ -237,7 +239,7 @@ datos4|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_divorcios,color = Region))+
-  labs(title="Evolución de tasas de divorcios en regiones de Corea del Sur durante 2000-2022",x = NULL,
+  labs(title="Evolución de tasas de divorcios en regiones de Corea del Sur en 2000-2022",x = NULL,
        y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,5)) + 
@@ -247,7 +249,7 @@ datos4|>
   scale_color_manual(values = paises) 
 ```
 
-###### Grafico 4
+###### Gráfico 4
 
 ```{r,echo=FALSE,warning=FALSE}
 S5 <-datos_demografia %>% 
@@ -291,7 +293,7 @@ datos5|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_casamientos,color = Region))+
-  labs(title="Evolución de tasas de casamientos en regiones de Corea del Sur durante 2000-2022",x = NULL,y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
+  labs(title="Evolución de tasas de casamientos en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,8)) + 
   geom_line( size = 1)+
@@ -300,7 +302,7 @@ datos5|>
   scale_color_manual(values = paises) 
 ```
 
-###### Grafico 5
+###### Gráfico 5
 
 ```{r,echo=FALSE,warning=FALSE}
 S6 <-datos_demografia %>% 
@@ -344,7 +346,7 @@ datos6|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_crecimiento_natural,color = Region))+
-  labs(title="Evolución de tasas de crecimiento natural en regiones de Corea del Sur durante 2000-2022",x = NULL,y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
+  labs(title="Evolución de tasas de crecimiento natural en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(-10,12)) + 
   geom_line( size = 1)+
@@ -352,8 +354,6 @@ datos6|>
   theme(axis.text.x = element_text(angle = 0),legend.position = "bottom")+
   scale_color_manual(values = paises) 
 ```
-
-\
 
 Como vimos anterioremente se puede ver un analisis durante los ultimos 22 años sobre que a pasado en al demografia de Corea y su variacion, pero ¿Como se vio afectado este pais socialmente duante la pandemia?¿Habra afectado como lo hizo en otros paises con los numero sde naciemeientos y muertes?. Para responder esta pregunta mostraremso una tabla que incluye el promedio de cada una de las tasas en el correspondiente año por cada region de Corea.
 

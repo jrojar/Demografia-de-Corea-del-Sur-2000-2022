@@ -58,7 +58,7 @@ datos2|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_nacimientos,color = Region))+
-  labs(title="Evolución de tasas de nacimientos en regiones de Corea del Sur durante 2000-2022",x = NULL,
+  labs(title="Evolución de tasas de nacimientos en regiones de Corea del Sur en 2000-2022",x = NULL,
        y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,14)) + 
@@ -115,7 +115,7 @@ datos3|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_Fallecimientos,color = Region))+
-  labs(title="Evolución de tasas de fallecimientos en regiones de Corea del Sur durante 2000-2022",x = NULL,
+  labs(title="Evolución de tasas de fallecimientos en regiones de Corea del Sur en 2000-2022",x = NULL,
        y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,10)) + 
@@ -168,7 +168,7 @@ datos4|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_divorcios,color = Region))+
-  labs(title="Evolución de tasas de divorcios en regiones de Corea del Sur durante 2000-2022",x = NULL,
+  labs(title="Evolución de tasas de divorcios en regiones de Corea del Sur en 2000-2022",x = NULL,
        y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,5)) + 
@@ -220,7 +220,7 @@ datos5|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_casamientos,color = Region))+
-  labs(title="Evolución de tasas de casamientos en regiones de Corea del Sur durante 2000-2022",x = NULL,y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
+  labs(title="Evolución de tasas de casamientos en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Valor tasa",subtitle = "Comparación de  tasas en las regiones Seoul, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,8)) + 
   geom_line( size = 1)+
@@ -273,7 +273,7 @@ datos6|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_crecimiento_natural,color = Region))+
-  labs(title="Evolución de la tasa de crecimiento natural en regiones de Corea del Sur durante 2000 y 2022",x = NULL,y = "Tasa de crecimiento natural")+
+  labs(title="Evolución de la tasa de crecimiento natural en regiones de Corea del Sur en 2000 y 2022",x = NULL,y = "Tasa de crecimiento natural")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(-10,12)) + 
   geom_line( size = 1)+
