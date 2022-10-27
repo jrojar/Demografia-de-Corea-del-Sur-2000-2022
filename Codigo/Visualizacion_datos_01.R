@@ -59,7 +59,7 @@ datos2|>
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_nacimientos,color = Region))+
   labs(title="Evolución de tasas de nacimientos en regiones de Corea del Sur entre 2000-2022",x = NULL,
-       y = "Nacimientos anuales cada mil habitantes",subtitle = "Comparación de las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
+       y = "Nacimientos anuales cada mil habitantes",subtitle = "Comparación entre las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,14)) + 
   geom_line( size = 1)+
@@ -117,7 +117,7 @@ datos3|>
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_Fallecimientos,color = Region))+
   labs(title="Evolución de tasas de fallecimientos en regiones de Corea del Sur en 2000-2022",x = NULL,
-       y = "Fallecimientos anuales por cada mil habitantes",subtitle = "Comparación de las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
+       y = "Fallecimientos anuales por cada mil habitantes",subtitle = "Comparación entre las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,10)) + 
   geom_line( size = 1)+
@@ -170,7 +170,7 @@ datos4|>
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_divorcios,color = Region))+
   labs(title="Evolución de tasas de divorcios en regiones de Corea del Sur en 2000-2022",x = NULL,
-       y = "Divorcios anuales por cada mil habitantes",subtitle = "Comparación de las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
+       y = "Divorcios anuales por cada mil habitantes",subtitle = "Comparación entre las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,5)) + 
   geom_line( size = 1)+
@@ -221,7 +221,8 @@ datos5|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_casamientos,color = Region))+
-  labs(title="Evolución de tasas de casamientos en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Casamientos anuales por cada mil habitantes",subtitle = "Comparación de las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
+  labs(title="Evolución de tasas de casamientos en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Casamientos anuales por cada mil habitantes",
+       subtitle = "Comparación entre las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,8)) + 
   geom_line( size = 1)+
@@ -274,7 +275,8 @@ datos6|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_crecimiento_natural,color = Region))+
-  labs(title="Evolución de tasas de crecimiento natural en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Creciemiento natural anual por cada mil habitantes",subtitle = "Comparación de las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
+  labs(title="Evolución de tasas de crecimiento natural en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Creciemiento natural anual por cada mil habitantes",
+       subtitle = "Comparación entre las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(-10,12)) + 
   geom_line( size = 1)+

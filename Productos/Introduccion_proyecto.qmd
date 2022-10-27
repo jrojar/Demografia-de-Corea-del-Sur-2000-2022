@@ -72,7 +72,7 @@ Como podemos ver tenemos distintas variables donde en su mayoría son de tipo nu
 
 A continuacion con se expondrán a través de gráficos y una tabla la evolución de estas durante los años 2000 hasta 2022. Cada uno de los esquemas representará el progreso promedio de las tasas por cada año en las ciudades o regiones con mayor población del país a trabajar, las cuales son: Busan, Seúl, Incheon, Daegu y Daejeon.
 
-Ahora, podemos ver la figura 1 la cual presenta la tasa de nacimiento:
+Ahora, podemos ver la figura 1 la cual presenta el desarrollo de la tasa de nacimiento:
 
 ###### Gráfico 1
 
@@ -119,7 +119,7 @@ datos2|>
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_nacimientos,color = Region))+
   labs(title="Evolución de tasas de nacimientos en regiones de Corea del Sur entre 2000-2022",x = NULL,
-       y = "Nacimientos anuales cada mil habitantes",subtitle = "Comparación de las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
+       y = "Nacimientos anuales cada mil habitantes",subtitle = "Comparación entre las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,14)) + 
   geom_line( size = 1)+
@@ -131,7 +131,7 @@ datos2|>
 
 ```
 
-Al observar le grafico podemos darnos cuenta de que no existe en general un equilibrio de la tasa de nacimiento, pero si se puede decir globalmente que en ambas regiones se presentan las mismas tendencias: aumentan en los mismos años y lo mismo sucede cuando disminuye esta tasa. Si nos fijamos entre 2001 y 2002 existe una disminución de la tasa de nacimientos pues se puede esperar esto por la lucha o guerra contra el terrorismo. Al igual que la disminución entre 2016 a 2020 esto se puede atribuir a cronológicamente a primero en 2016 ocurrió una crisis política a causa de la mandataria, luego de esto comenzó la tensión entre EE. UU. y corea del norte debido a la tensión entre sus presidentes por la supuesta guerra nuclear que se especulaba y la pandemia que comenzó en 2019, lo cual se puede predecir que las personas en consecuencia de circunstancias de incertidumbre sobre el futuro provocara que menos mujeres se sientan inseguras para ser madres.
+Al observar le grafico podemos darnos cuenta de que no existe en general un equilibrio en la tasa de nacimiento de cada ciudad, pero si se puede decir globalmente que en las cinco regiones se presentan las mismas tendencias: aumentan en los mismos años y lo mismo sucede cuando disminuye. Si nos fijamos entre 2001 y 2002 existe una disminución, la cual es predecible de esperar por la guerra contra el terrorismo en que se encontraba el mundo en dicho peridodo. Al igual que la disminución entre 2016 a 2020, que se puede atribuir a cronológicamente a los hechos: en 2016 ocurrió una crisis política a causa de la mandataria surcoreana, luego comenzó la tensión política entre EE. UU. y Corea del Norte debido a la contraposción entre sus presidentes por una supuesta guerra nuclear que se especulaba y finalemente la pandemia que comenzó en 2019. Lo cual se puede presagiar que las personas en consecuencia de circunstancias mundiales en estos periodos y tambien la incertidumbre sobre el futuro, provocarán que menos mujeres se sientan seguras para ser madres.
 
 ###### Gráfico 2
 
@@ -178,7 +178,7 @@ datos3|>
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_Fallecimientos,color = Region))+
   labs(title="Evolución de tasas de fallecimientos en regiones de Corea del Sur en 2000-2022",x = NULL,
-       y = "Fallecimientos anuales por cada mil habitantes",subtitle = "Comparación de las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
+       y = "Fallecimientos anuales por cada mil habitantes",subtitle = "Comparación entre las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,10)) + 
   geom_line( size = 1)+
@@ -232,7 +232,7 @@ datos4|>
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_divorcios,color = Region))+
   labs(title="Evolución de tasas de divorcios en regiones de Corea del Sur en 2000-2022",x = NULL,
-       y = "Divorcios anuales por cada mil habitantes",subtitle = "Comparación de las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
+       y = "Divorcios anuales por cada mil habitantes",subtitle = "Comparación entre las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,5)) + 
   geom_line( size = 1)+
@@ -285,7 +285,7 @@ datos5|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_casamientos,color = Region))+
-  labs(title="Evolución de tasas de casamientos en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Casamientos anuales por cada mil habitantes",subtitle = "Comparación de las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
+  labs(title="Evolución de tasas de casamientos en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Casamientos anuales por cada mil habitantes",subtitle = "Comparación entre las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(0,8)) + 
   geom_line( size = 1)+
@@ -338,7 +338,7 @@ datos6|>
   filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
                        "Daegu" ,  "Daejeon" ))|>
   ggplot(aes(x = Año, y= Tasa_de_crecimiento_natural,color = Region))+
-  labs(title="Evolución de tasas de crecimiento natural en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Creciemiento natural anual por cada mil habitantes",subtitle = "Comparación de las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
+  labs(title="Evolución de tasas de crecimiento natural en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Creciemiento natural anual por cada mil habitantes",subtitle = "Comparación entre las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
   scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
   ylim(c(-10,12)) + 
   geom_line( size = 1)+
