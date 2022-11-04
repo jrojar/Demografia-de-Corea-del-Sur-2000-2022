@@ -187,6 +187,14 @@ datos3|>
   scale_color_manual(values = paises) 
 ```
 
+Al observar el comportamiento de la tasa en las cinco regiones se puede decir que desde el año 2004 en adelante este índice aumenta considerablemente y destaca en los últimos años donde está presente un peack de crecimiento.
+
+Es importante destacar que la región con mayor tasa de fallecimientos corresponde a Busan, siendo la segunda ciudad con mayor población.
+
+Frente a la representación e información de hechos internos del país, durante 2004 la cifra de suicidios creció considerablemente en los jóvenes y empieza a ser más común que la causa de muerte entre los habitantes del país sea el cáncer. Y durante el trascurso de los años la población se concentra en adultos entre 30 y 45 años. Además, la pandemia global que se vive durante el 2019 y hasta hoy.
+
+Con esto es posible relacionar como causa y efecto que frente a los antecedentes internos del territorio ocurridos en los años últimos 22 años. Primero se enlaza que comenzara a crecer durante el año 2004 por el aumento de muertes de jóvenes, luego que a más adultos fueran afectados por el cáncer y finalmente el peack fuera provocado por el COVID-19 donde no había control de la enfermedad
+
 ###### Gráfico 3
 
 ```{r,echo=FALSE,warning=FALSE}
@@ -241,7 +249,13 @@ datos4|>
   scale_color_manual(values = paises) 
 ```
 
-###### Gráfico 4
+En este gráfico la tasa que lidera es la de la ciudad de Incheon en los 22 años.
+
+Si hacemos una descrpción sobre el comportamiento global la tasa, esta aumento desde el año 2000, tuvo tu mayor valor en 2003 para luego disminuir hasta 2022 donde no se vio otro aumento, incluso en este último año es donde alcanza el valor mínimo.
+
+Durante el año 2003 se presenció el valor máximo de esta tasa, pues, esto se puede atribuir a que en este año se realizaron las negociaciones entre potencias, incluyendo a Corea del Sur, con tal de mejorar la relación entre las Coreas, lo cual no tuvo un buen desenlace provocando incertidumbre del futuro. Por lo que se puede concluir que enfrente de esto muchas familias decidieron tomar rumbos distintos para un futuro con menos dependencia familiar.
+
+###### Gráfico 4 
 
 ```{r,echo=FALSE,warning=FALSE}
 S5 <-datos_demografia %>% 
@@ -293,6 +307,12 @@ datos5|>
   theme(axis.text.x = element_text(angle = 0),legend.position = "bottom")+
   scale_color_manual(values = paises) 
 ```
+
+Para esta representación se puede ver que evoluciona de manera decreciente en la cifra de la tasa, no existe la presencia de fuertes amentos o disminución.
+
+Este progreso se puede enlazar que en los 22 años la sociedad surcoreana ha cambiado, ya que menos personas se casan en los últimos años (a contar de 2012), cabe destacar que era muy común que las familias arreglaran matrimonios y obligaran a casarse a parejas tanto por la religión católica como de otra creencia, por lo que existe más conciencia de rechazo al matrimonio e ir en contra de esto.
+
+Donde no existe un hecho histórico que haya provocado esta conducta para este caso, sino que una evolución de la sociedad.
 
 ###### Gráfico 5
 
@@ -347,6 +367,10 @@ datos6|>
   scale_color_manual(values = paises) 
 ```
 
+Al percibir la conducta de la tasa en la representación, esta si desde su comenzó hasta su fin tiene un notable cambio, ya que la cifra de la tasa termina siendo negativa, donde comenzó siendo positiva. Es por esto que durante la marcha del tiempo se presenciaron más muertes que nacimientos en Corea del Sur.
+
+Frente a esto, al recolectar información de hechos tanto externos como internos que podrían haber interferido en esto, se puede comentar que algunas de las causas de esto es son: en primer lugar que existió un cambio desde 2016 (donde aproximadamente comienza su descenso) el cual se puede relacionar con el cambio de conciencia en la sociedad con respecto a no tener hijos y en segundo lugar que se relaciona con la causa anterior es la incertidumbre que comienza a aumentar por las relaciones tensas entre países, como USA con Corea del Norte y problemas globales económicos.
+
 Como vimos anterioremente se puede ver un analisis durante los ultimos 22 años sobre que a pasado en al demografia de Corea y su variacion, pero ¿Como se vio afectado este pais socialmente duante la pandemia?¿Habra afectado como lo hizo en otros paises con los numero sde naciemeientos y muertes?. Para responder esta pregunta mostraremso una tabla que incluye el promedio de cada una de las tasas en el correspondiente año por cada region de Corea.
 
 ```{r,echo=FALSE}
@@ -372,3 +396,12 @@ datosf%>%
                                           "Tasa_de_casamientos",
                                           "Tasa_de_crecimiento_natural"))
 ```
+
+Con la tabla podemos notar que en algunas regiones existe mayor variación que en otras, donde netamente es por el tamaño de la población en cada una.
+
+Se puede analizar que a todas les afecto de manera negativa, sobre todo en la tasa de crecimiento natural, la cual se puede decir que el número de fallecimientos fue superior frente a la natalidad para las cinco regiones donde en cada cifra final término negativa. En el caso de la tasa de nacimiento no vario significativamente su valor en este periodo en las ciudades, por lo que se puede concluir que ya las personas no decidían tener hijos, en el caso de la tasa de fallecimientos en la ciudad de Daegu vario considerablemente frente a las otras, pero aun así cambio su valor aumentando el caso de difuntos en este periodo por el descontrol de la enfermedad.
+
+Y con respecto a la tasa de casamientos y divorcios, se puede generalmente concluir que durante este periodo estas no fueron afectadas de manera considerable como la tasa de fallecimiento y crecimiento natural, por lo que se puede ultimar que estas tasas no fueron relevantes frente a la pandemia.
+
+# 
+Conclusión 
