@@ -70,7 +70,7 @@ Como podemos ver tenemos distintas variables donde en su mayoría son de tipo nu
 
 ## Gráficos y tablas
 
-A continuacion con se expondrán a través de gráficos y una tabla la evolución de estas durante los años 2000 hasta 2022. Cada uno de los esquemas representará el progreso promedio de las tasas por cada año en las ciudades o regiones con mayor población del país a trabajar, las cuales son: Busan, Seúl, Incheon, Daegu y Daejeon.
+A continuacion se expondrán a través de gráficos y una tabla la evolución de las tasas durante los años 2000 hasta 2022. Cada uno de los esquemas representará el progreso promedio de las tasas por cada año en las ciudades o regiones con mayor población del país a trabajar, las cuales son: Busan, Seúl, Incheon, Daegu y Daejeon.
 
 Ahora, podemos ver la figura 1 la cual presenta el desarrollo de la tasa de nacimiento:
 
@@ -133,6 +133,8 @@ datos2|>
 
 Al observar le grafico podemos darnos cuenta de que no existe en general un equilibrio en la tasa de nacimiento de cada ciudad, pero si se puede decir globalmente que en las cinco regiones se presentan las mismas tendencias: aumentan en los mismos años y lo mismo sucede cuando disminuye. Si nos fijamos entre 2001 y 2002 existe una disminución, la cual es predecible de esperar por la guerra contra el terrorismo en que se encontraba el mundo en dicho peridodo. Al igual que la disminución entre 2016 a 2020, que se puede atribuir a cronológicamente a los hechos: en 2016 ocurrió una crisis política a causa de la mandataria surcoreana, luego comenzó la tensión política entre EE. UU. y Corea del Norte debido a la contraposción entre sus presidentes por una supuesta guerra nuclear que se especulaba y finalemente la pandemia que comenzó en 2019. Lo cual se puede presagiar que las personas en consecuencia de circunstancias mundiales en estos periodos y tambien la incertidumbre sobre el futuro, provocarán que menos mujeres se sientan seguras para ser madres.
 
+De esta forma, también se puede estudiar la tasa de fallecimiento en la misma población y qué puede traer consigo, tal como se analizó anteriormente. A continuación, se presenta el gráfico:
+
 ###### Gráfico 2
 
 ```{r,echo=FALSE,warning=FALSE}
@@ -187,15 +189,76 @@ datos3|>
   scale_color_manual(values = paises) 
 ```
 
-Al observar el comportamiento de la tasa en las cinco regiones se puede decir que desde el año 2004 en adelante este índice aumenta considerablemente y destaca en los últimos años donde está presente un peack de crecimiento.
+Al observar el comportamiento de la tasa en las cinco regiones se puede decir que desde el año 2004 en adelante este índice aumenta considerablemente y destaca en los últimos años donde está presente un peak de crecimiento.
 
 Es importante destacar que la región con mayor tasa de fallecimientos corresponde a Busan, siendo la segunda ciudad con mayor población.
 
-Frente a la representación e información de hechos internos del país, durante 2004 la cifra de suicidios creció considerablemente en los jóvenes y empieza a ser más común que la causa de muerte entre los habitantes del país sea el cáncer. Y durante el trascurso de los años la población se concentra en adultos entre 30 y 45 años. Además, la pandemia global que se vive durante el 2019 y hasta hoy.
+Frente a la representación e información de hechos internos del país, durante 2004 la cifra de suicidios creció considerablemente en los jóvenes, y empieza a ser más común que la causa de muerte entre los habitantes del país sea el cáncer. Y durante el trascurso de los años la población se concentra en adultos entre 30 y 45 años. Además, la pandemia global que se vive durante el 2019 y hasta hoy aumentó la tasa.
 
-Con esto es posible relacionar como causa y efecto que frente a los antecedentes internos del territorio ocurridos en los años últimos 22 años. Primero se enlaza que comenzara a crecer durante el año 2004 por el aumento de muertes de jóvenes, luego que a más adultos fueran afectados por el cáncer y finalmente el peack fuera provocado por el COVID-19 donde no había control de la enfermedad
+Con esto es posible relacionar la causa y efecto frente a los antecedentes internos del territorio ocurridos en los últimos 22 años, que se ve con una alteración en la demografía. Primero se enlaza que comenzará a crecer durante el año 2004 por el aumento de muertes de jóvenes, luego que a más adultos fueran afectados por el cáncer y finalmente el peak fuera provocado por el COVID-19 donde no había control de la enfermedad.
+
+Por consiguiente, podemos hacer el estudio del crecimiento natural, respresentado por el siguiente gráfico:
 
 ###### Gráfico 3
+
+```{r,echo=FALSE,warning=FALSE}
+S6 <-datos_demografia %>% 
+  filter(Region %in% "Seoul" ) %>% 
+  aggregate(Tasa_de_crecimiento_natural~Año, FUN = mean)
+
+S6$Region = rep("Seoul",23)
+
+b6 <-datos_demografia %>% 
+  filter(Region %in% "Busan" ) %>% 
+  aggregate(Tasa_de_crecimiento_natural~Año, FUN = mean)
+
+b6$Region = rep("Busan",23)
+
+i6 <-datos_demografia %>% 
+  filter(Region %in% "Incheon" ) %>% 
+  aggregate(Tasa_de_crecimiento_natural~Año , FUN = mean)
+
+i6$Region = rep("Incheon",23)
+
+d6 <-datos_demografia %>% 
+  filter(Region %in% "Daegu" ) %>% 
+  aggregate(Tasa_de_crecimiento_natural~Año, FUN = mean)
+
+d6$Region = rep("Daegu",23)
+
+d26<-datos_demografia %>% 
+  filter(Region %in% "Daejeon" ) %>% 
+  aggregate(Tasa_de_crecimiento_natural~Año, FUN = mean)
+d26$Region = rep("Daejeon",23)
+
+datos6<-rbind(S6,b6,i6,d6,d26)
+datos6<-data.frame(datos6)
+
+
+
+#grafico
+paises <-c("Seoul" = "#052F61" ,  "Busan" = "#CE6633"  , "Incheon" = "#A50E82", "Daegu" = "#6A9E1F","Daejeon" = "#E87D37" )
+
+datos6|>
+  filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
+                       "Daegu" ,  "Daejeon" ))|>
+  ggplot(aes(x = Año, y= Tasa_de_crecimiento_natural,color = Region))+
+  labs(title="Evolución de tasas de crecimiento natural en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Creciemiento natural anual por cada mil habitantes",subtitle = "Comparación entre las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
+  scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
+  ylim(c(-10,12)) + 
+  geom_line( size = 1)+
+  geom_point(size = 2) +
+  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom")+
+  scale_color_manual(values = paises) 
+```
+
+Al percibir la conducta de la tasa en la representación, esta sí, desde su comienzo hasta su fin tiene un notable cambio, ya que la cifra de la tasa termina siendo negativa, donde era positiva. Es por esto que durante la marcha del tiempo se presenciaron más muertes que nacimientos en Corea del Sur.
+
+Frente a esto, al recolectar información de hechos, tanto externos como internos, que podrían haber interferido en esto, se puede comentar que algunas de las causas de esto son: en primer lugar que existió un cambio desde 2016 (donde aproximadamente comienza su descenso), el cual se puede relacionar con el cambio de conciencia en la sociedad con respecto a no tener hijos; y en segundo lugar, que se relaciona con la causa anterior, es la incertidumbre que comienza a aumentar por las relaciones tensas entre países, como USA con Corea del Norte y problemas globales económicos.
+
+A diferencia de lo anterior, se estudia también la tasa de divorcios en estas regiones, como se ve en el gráfico que sigue.
+
+###### Gráfico 4
 
 ```{r,echo=FALSE,warning=FALSE}
 S4 <-datos_demografia %>% 
@@ -251,11 +314,13 @@ datos4|>
 
 En este gráfico la tasa que lidera es la de la ciudad de Incheon en los 22 años.
 
-Si hacemos una descrpción sobre el comportamiento global la tasa, esta aumento desde el año 2000, tuvo tu mayor valor en 2003 para luego disminuir hasta 2022 donde no se vio otro aumento, incluso en este último año es donde alcanza el valor mínimo.
+Si hacemos una descripción sobre el comportamiento global de la tasa, esta aumento desde el año 2000, tuvo su mayor valor en 2003 para luego disminuir hasta 2022 donde no se vio otro aumento, incluso en este último año es donde alcanza el valor mínimo.
 
-Durante el año 2003 se presenció el valor máximo de esta tasa, pues, esto se puede atribuir a que en este año se realizaron las negociaciones entre potencias, incluyendo a Corea del Sur, con tal de mejorar la relación entre las Coreas, lo cual no tuvo un buen desenlace provocando incertidumbre del futuro. Por lo que se puede concluir que enfrente de esto muchas familias decidieron tomar rumbos distintos para un futuro con menos dependencia familiar.
+Durante el año 2003 se presenció el valor máximo de esta tasa, pues, esto se puede atribuir a que en este año se realizaron las negociaciones entre potencias, incluyendo a Corea del Sur, con tal de mejorar la relación entre las Coreas, lo cual no tuvo un buen desenlace provocando incertidumbre del futuro. Por lo que se puede concluir que frente a esto, muchas familias decidieron tomar rumbos distintos para un futuro con menos dependencia familiar.
 
-###### Gráfico 4 
+Siguiendo la misma línea de estudio, el siguiente gráfico representa lo contrario a lo de antes, es decir, la tasa de casamientos.
+
+###### Gráfico 5
 
 ```{r,echo=FALSE,warning=FALSE}
 S5 <-datos_demografia %>% 
@@ -312,66 +377,9 @@ Para esta representación se puede ver que evoluciona de manera decreciente en l
 
 Este progreso se puede enlazar que en los 22 años la sociedad surcoreana ha cambiado, ya que menos personas se casan en los últimos años (a contar de 2012), cabe destacar que era muy común que las familias arreglaran matrimonios y obligaran a casarse a parejas tanto por la religión católica como de otra creencia, por lo que existe más conciencia de rechazo al matrimonio e ir en contra de esto.
 
-Donde no existe un hecho histórico que haya provocado esta conducta para este caso, sino que una evolución de la sociedad.
+En este caso, no existe un hecho histórico que haya provocado esta conducta para este caso, sino que una evolución de la sociedad.
 
-###### Gráfico 5
-
-```{r,echo=FALSE,warning=FALSE}
-S6 <-datos_demografia %>% 
-  filter(Region %in% "Seoul" ) %>% 
-  aggregate(Tasa_de_crecimiento_natural~Año, FUN = mean)
-
-S6$Region = rep("Seoul",23)
-
-b6 <-datos_demografia %>% 
-  filter(Region %in% "Busan" ) %>% 
-  aggregate(Tasa_de_crecimiento_natural~Año, FUN = mean)
-
-b6$Region = rep("Busan",23)
-
-i6 <-datos_demografia %>% 
-  filter(Region %in% "Incheon" ) %>% 
-  aggregate(Tasa_de_crecimiento_natural~Año , FUN = mean)
-
-i6$Region = rep("Incheon",23)
-
-d6 <-datos_demografia %>% 
-  filter(Region %in% "Daegu" ) %>% 
-  aggregate(Tasa_de_crecimiento_natural~Año, FUN = mean)
-
-d6$Region = rep("Daegu",23)
-
-d26<-datos_demografia %>% 
-  filter(Region %in% "Daejeon" ) %>% 
-  aggregate(Tasa_de_crecimiento_natural~Año, FUN = mean)
-d26$Region = rep("Daejeon",23)
-
-datos6<-rbind(S6,b6,i6,d6,d26)
-datos6<-data.frame(datos6)
-
-
-
-#grafico
-paises <-c("Seoul" = "#052F61" ,  "Busan" = "#CE6633"  , "Incheon" = "#A50E82", "Daegu" = "#6A9E1F","Daejeon" = "#E87D37" )
-
-datos6|>
-  filter(Region %in% c("Seoul" ,  "Busan"  , "Incheon", 
-                       "Daegu" ,  "Daejeon" ))|>
-  ggplot(aes(x = Año, y= Tasa_de_crecimiento_natural,color = Region))+
-  labs(title="Evolución de tasas de crecimiento natural en regiones de Corea del Sur en 2000-2022",x = NULL,y = "Creciemiento natural anual por cada mil habitantes",subtitle = "Comparación entre las regiones Seúl, Busan, Incheon, Daegu, Daejeon",caption = "Fuente: elaboración propia a partir de datos disponibles en Kaggle",color = "Región")+
-  scale_x_continuous(breaks = seq("2000", "2022", by = 2)) +
-  ylim(c(-10,12)) + 
-  geom_line( size = 1)+
-  geom_point(size = 2) +
-  theme(axis.text.x = element_text(angle = 0),legend.position = "bottom")+
-  scale_color_manual(values = paises) 
-```
-
-Al percibir la conducta de la tasa en la representación, esta si desde su comenzó hasta su fin tiene un notable cambio, ya que la cifra de la tasa termina siendo negativa, donde comenzó siendo positiva. Es por esto que durante la marcha del tiempo se presenciaron más muertes que nacimientos en Corea del Sur.
-
-Frente a esto, al recolectar información de hechos tanto externos como internos que podrían haber interferido en esto, se puede comentar que algunas de las causas de esto es son: en primer lugar que existió un cambio desde 2016 (donde aproximadamente comienza su descenso) el cual se puede relacionar con el cambio de conciencia en la sociedad con respecto a no tener hijos y en segundo lugar que se relaciona con la causa anterior es la incertidumbre que comienza a aumentar por las relaciones tensas entre países, como USA con Corea del Norte y problemas globales económicos.
-
-Como vimos anterioremente se puede ver un analisis durante los ultimos 22 años sobre que a pasado en al demografia de Corea y su variacion, pero ¿Como se vio afectado este pais socialmente duante la pandemia?¿Habra afectado como lo hizo en otros paises con los numero sde naciemeientos y muertes?. Para responder esta pregunta mostraremso una tabla que incluye el promedio de cada una de las tasas en el correspondiente año por cada region de Corea.
+Como vimos anterioremente, se puede ver un analisis durante los ultimos 22 años sobre qué ha pasado en al demografia de Corea y su variación, pero ¿como se vio afectado este país socialmente duante la pandemia?¿Habrá afectado como lo hizo en otros países con los numero de nacimientos y muertes? Para responder esta pregunta, mostraremos una tabla que incluye el promedio de cada una de las tasas en el correspondiente año por cada región de Corea.
 
 ```{r,echo=FALSE}
 inicio <- "2019"
@@ -399,9 +407,8 @@ datosf%>%
 
 Con la tabla podemos notar que en algunas regiones existe mayor variación que en otras, donde netamente es por el tamaño de la población en cada una.
 
-Se puede analizar que a todas les afecto de manera negativa, sobre todo en la tasa de crecimiento natural, la cual se puede decir que el número de fallecimientos fue superior frente a la natalidad para las cinco regiones donde en cada cifra final término negativa. En el caso de la tasa de nacimiento no vario significativamente su valor en este periodo en las ciudades, por lo que se puede concluir que ya las personas no decidían tener hijos, en el caso de la tasa de fallecimientos en la ciudad de Daegu vario considerablemente frente a las otras, pero aun así cambio su valor aumentando el caso de difuntos en este periodo por el descontrol de la enfermedad.
+Se puede analizar que a todas les afecto de manera negativa, sobre todo en la tasa de crecimiento natural, la cual se puede decir que el número de fallecimientos fue superior frente a la natalidad para las cinco regiones donde en cada cifra final terminó negativa. En el caso de la tasa de nacimiento, esta no varió significativamente su valor en este periodo en las ciudades, por lo que se puede concluir que ya las personas no decidían tener hijos. En el caso de la tasa de fallecimientos en la ciudad de Daegu, varió considerablemente frente a las otras, pero aun así cambió su valor, aumentando el caso de difuntos en este período por el descontrol de la enfermedad.
 
-Y con respecto a la tasa de casamientos y divorcios, se puede generalmente concluir que durante este periodo estas no fueron afectadas de manera considerable como la tasa de fallecimiento y crecimiento natural, por lo que se puede ultimar que estas tasas no fueron relevantes frente a la pandemia.
+Con respecto a la tasa de casamientos y divorcios, se puede generalmente concluir que durante este período, estas no fueron afectadas de manera considerable como la tasa de fallecimiento y crecimiento natural, por lo que se puede ultimar que estas tasas no fueron relevantes frente a la pandemia.
 
-# 
-Conclusión 
+# Conclusión
