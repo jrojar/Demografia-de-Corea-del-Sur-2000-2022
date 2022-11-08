@@ -4,6 +4,8 @@ format: html
 editor: visual
 author: "Javiera Rojas"
 lang: es
+toc: true
+toc_float: TRUE
 theme: litera
 title-block-author-single: "Autora"
 ---
@@ -68,7 +70,7 @@ data.frame(Variables = desp,
 
 Como podemos ver tenemos distintas variables donde en su mayoría son de tipo numérico.Pues nos enfocaremos en las tasas de naciemiento, fallecimientos, divorcios y matrimonio, y el año de cada registro.
 
-## Gráficos y tablas
+## Gráficos y tabla
 
 A continuacion se expondrán a través de gráficos y una tabla la evolución de las tasas durante los años 2000 hasta 2022. Cada uno de los esquemas representará el progreso promedio de las tasas por cada año en las ciudades o regiones con mayor población del país a trabajar, las cuales son: Busan, Seúl, Incheon, Daegu y Daejeon.
 
@@ -412,3 +414,9 @@ Se puede analizar que a todas les afecto de manera negativa, sobre todo en la ta
 Con respecto a la tasa de casamientos y divorcios, se puede generalmente concluir que durante este período, estas no fueron afectadas de manera considerable como la tasa de fallecimiento y crecimiento natural, por lo que se puede ultimar que estas tasas no fueron relevantes frente a la pandemia.
 
 # Conclusión
+
+Como se expuso durante el desarrollo del reporte, que los acontecimientos, tanto internos de un país como externos o mundiales, afectan o repercuten en la demográfica de un territorio. Siempre cuando este hecho sea relévate, como por ejemplo una crisis económica o política.
+
+Frente a los datos y resultados, se nos es factible concluir que en el momento que ocurre un hecho como a nivel región como de magnitud global afectará no solo a la organización del país, sino que también como se comportará la sociedad y la toma de decisiones se vera alterada. En consecuencia,p tomando como referencia a esta potencia nos lleva a que se puede tomar esta afirmación para el comportamiento de su sociedad.
+
+Al considerar la evolución de cada una de las tasas, es probable que en algunos años más sean muy distintas a lo que se vio durante los últimos 22 años, por lo que sería interesante y de importancia ver como otros hecho afectan a esta potencia mundial que por hoy sigue liderando con su desempeñó económico. Con esto también se podrían agregar nuevas tasas que son influyentes en la nación, como: promedio de edad de la población, desempleo, sueldo mínimo, entre otras, para conocer su conducta frente a algún hecho relevante.
