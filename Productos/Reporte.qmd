@@ -431,6 +431,7 @@ datosf%>%
   tab_spanner(label = "Tasas",columns = c("Nacimientos","Fallecimientos","Divorcios","Casamientos","Crecimientos_natural"))
 
 
+
 ```
 
 Con la tabla podemos notar que en algunas regiones existe mayor variación que en otras, donde netamente es por el tamaño de la población en cada una.

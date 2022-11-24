@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Javiera Rojas">
+
+<title>Desarrollo de la demografía de Corea del Sur durante el período 2000-2022</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Reporte_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Reporte_files/libs/quarto-html/quarto.js"></script>
+<script src="Reporte_files/libs/quarto-html/popper.min.js"></script>
+<script src="Reporte_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Reporte_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Reporte_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Reporte_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Reporte_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Reporte_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Reporte_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Indice de contenidos</h2>
+   
+  <ul>
+  <li><a href="#resumen-ejecutivo" id="toc-resumen-ejecutivo" class="nav-link active" data-scroll-target="#resumen-ejecutivo">Resumen ejecutivo</a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#desarrollo" id="toc-desarrollo" class="nav-link" data-scroll-target="#desarrollo">Desarrollo</a>
+  <ul class="collapse">
+  <li><a href="#base-de-datos" id="toc-base-de-datos" class="nav-link" data-scroll-target="#base-de-datos">Base de datos</a></li>
+  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">Resultados</a></li>
+  </ul></li>
+  <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión">Conclusión</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Desarrollo de la demografía de Corea del Sur durante el período 2000-2022</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autora</div>
+    <div class="quarto-title-meta-contents">
+             <p>Javiera Rojas </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="resumen-ejecutivo" class="level1">
+<h1>Resumen ejecutivo</h1>
+<p>En los últimos 22 años han ocurrido distintos sucesos que han afectado a todo el mundo provocando una evolución en distintas áreas, una de las que se podría ver afectada es en la comunidad del territorio. Con el fin de saber si algunos hechos externos e internos afectan directamente en la demografía se analizó una base de datos de la cantidad de habitantes de Corea del Sur que contenía las tasas y números de atributos de la población durante los últimos años. Los resultados obtenidos dieron paso para concluir que es posible que en otros países tanto los acontecimientos internos de este como externos afectan en la demografía del país, como por ejemplo el número de nacimientos y fallecidos. Frente a esto cualquier país está vulnerable a que su demografía cambie por lo que se sugiere que cada nación debe tener conciencia de que cualquier suceso trae repercusiones en la densidad poblacional.<br>
+</p>
+</section>
+<section id="introducción" class="level1">
+<h1>Introducción</h1>
+<p>En la actualidad, algunos países del mundo son mucho más relevantes que otros por tener aspectos como una gran dimensión territorial, poder económico y político y la organización de su sociedad. Una pieza del mundo que dispone con estas características y resalta es el continente asiático, que cuenta con, además de lo anterior, avances tecnológicos, donde los habitantes se ven influenciados beneficiosamente por esto sin perder sus raíces antiguas. Un país a destacar, que pertenece a este territorio corresponde a Corea del Sur. Una de las características es su gran número de habitantes, su cultura conservadora y su gran economía. Si retrocedemos un par de años, esta potencia mundial era totalmente distinta a la que conocemos actualmente, pues no poseía un buen lugar en el ranking del PIB, no era un gran exportador, ni un importador que llamase la atención. Por ende, se puede afirmar que en muy poco tiempo, Corea del Sur es un país que ha logrado tener un gran crecimiento.</p>
+<p>Al día de hoy, se puede apreciar la influencia que tiene la economía de este país a nivel mundial. Sin embargo, también existen otros temas de gran interés, tales como el ámbito social y demográfico. Es por esto que es interesante analizar la evolución de Corea del Sur en estos temas, en base a las siguientes preguntas: ¿Qué ha pasado con la población en los últimos 20 años? ¿Han existido otros hechos que han tenido incidencia en la mortalidad y natalidad? En este proyecto se intentará responder a estas preguntas con el fin de identificar si es que durante los últimos años se han presentado patrones que han sido a causa de un acto histórico.</p>
+<p>Para ello se analizará una base de datos que contiene variables demográficas de Corea del Sur para los últimos 22 años. Este reporte se enfocará en analizar esta base de datos para reconocer tendencias que hayan ocurrido en las ciudades con mayor densidad poblacional del país en este periodo de evaluación.</p>
+<p>Este trabajo está dividido en cuatro secciones. En la primera se entregará contexto respecto a Corea del Sur y el interés de su evolución demográfica en los últimos años. En segundo lugar, se describirán datos y variables para el análisis del trabajo. Luego, en la tercera, se dará un análisis descriptivo de los patrones de las variables de interés contenidas en la base de datos. Por último, en la cuarta sección, se interpretarán los patrones o resultados de la sección anterior en función de fenómenos históricos que ocurrieron en el período que cubre la base de datos que ocuparemos.</p>
+</section>
+<section id="desarrollo" class="level1">
+<h1>Desarrollo</h1>
+<section id="base-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="base-de-datos">Base de datos</h2>
+<p>La base de datos utilizada se obtuvo a través de <a href="https://www.kaggle.com/datasets/alexandrepetit881234/korean-demographics-20002022"><em>Kaggle</em></a> y se le aplicó una limpieza o modificación con tal de eliminar los datos mal ingresados y variables irrelevantes para el análisis, para seleccionar las variables de tasas demográficas. Tal como se observa en la tabla 1 se presta la base de datos final.</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="nhsybsjtqf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#nhsybsjtqf) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#nhsybsjtqf) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#nhsybsjtqf) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#nhsybsjtqf) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#nhsybsjtqf) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#nhsybsjtqf) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#nhsybsjtqf) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#nhsybsjtqf) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#nhsybsjtqf) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#nhsybsjtqf) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#nhsybsjtqf) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#nhsybsjtqf) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#nhsybsjtqf) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#nhsybsjtqf) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#nhsybsjtqf) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#nhsybsjtqf) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#nhsybsjtqf) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#nhsybsjtqf) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#nhsybsjtqf) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#nhsybsjtqf) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#nhsybsjtqf) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#nhsybsjtqf) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#nhsybsjtqf) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#nhsybsjtqf) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#nhsybsjtqf) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#nhsybsjtqf) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#nhsybsjtqf) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#nhsybsjtqf) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#nhsybsjtqf) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#nhsybsjtqf) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#nhsybsjtqf) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#nhsybsjtqf) .gt_left {
+  text-align: left;
+}
+
+:where(#nhsybsjtqf) .gt_center {
+  text-align: center;
+}
+
+:where(#nhsybsjtqf) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#nhsybsjtqf) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#nhsybsjtqf) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#nhsybsjtqf) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#nhsybsjtqf) .gt_super {
+  font-size: 65%;
+}
+
+:where(#nhsybsjtqf) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#nhsybsjtqf) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#nhsybsjtqf) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#nhsybsjtqf) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#nhsybsjtqf) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#nhsybsjtqf) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#nhsybsjtqf) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Descripción de variables a trabajar</td>
+    </tr>
+    
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Variables</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Tipo</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Descripción</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Region</td>
+<td class="gt_row gt_left">carácter</td>
+<td class="gt_row gt_left">Ciudad de Corea del Sur</td></tr>
+    <tr><td class="gt_row gt_left">Tasa_de_nacimientos</td>
+<td class="gt_row gt_left">numérico</td>
+<td class="gt_row gt_left">Número de nacimientos por cada mil habitantes en un año</td></tr>
+    <tr><td class="gt_row gt_left">Tasa_de_Fallecimientos</td>
+<td class="gt_row gt_left">numérico</td>
+<td class="gt_row gt_left">Número de muertes por cada mil habitantes en un año </td></tr>
+    <tr><td class="gt_row gt_left">Tasa_de_divorcios</td>
+<td class="gt_row gt_left">numérico</td>
+<td class="gt_row gt_left">Número de divorcios por cada mil habitantes durante un año</td></tr>
+    <tr><td class="gt_row gt_left">Tasa_de_casamientos</td>
+<td class="gt_row gt_left">numérico</td>
+<td class="gt_row gt_left">Número de casamientos por cada mil habitantes durante un año</td></tr>
+    <tr><td class="gt_row gt_left">Tasa_de_crecimiento_natural</td>
+<td class="gt_row gt_left">numérico</td>
+<td class="gt_row gt_left">Es el crecimiento o disminución natural expresado en términos relativos al tamaño de la población</td></tr>
+    <tr><td class="gt_row gt_left">Año</td>
+<td class="gt_row gt_left">numérico</td>
+<td class="gt_row gt_left">Corresponde al año de la fecha en que se registraron los datos</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p>El <a href="https://github.com/jrojar/Demografia-de-Corea-del-Sur-2000-2022/blob/main/Codigo/Trabajo_datos.R">código</a> utilizado para pre-procesamiento de los datos se encuentra disponible en el repositorio del proyecto.</p>
+</section>
+<section id="resultados" class="level2">
+<h2 class="anchored" data-anchor-id="resultados">Resultados</h2>
+<p>A continuación se expondrenmos resultados obtenidos a través de gráficos y una tabla la evolución de las tasas entre los años 2000 hasta 2022. Cada uno de los esquemas representará el progreso promedio de las tasas por cada año en las ciudades o regiones con mayor población del país a trabajar, las cuales son: Busan, Seúl, Incheon, Daegu y Daejeon.</p>
+<p>En primer lugar analizaremos la evolución de las tasas en estas regiones como se observa en la gráfico 1.</p>
+<section id="gráfico-1" class="level6">
+<h6 class="anchored" data-anchor-id="gráfico-1">Gráfico 1</h6>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Reporte_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Al observar le gráfico podemos darnos cuenta de que no existe en general un equilibrio en la tasa de nacimiento de cada ciudad, pero sí se puede decir globalmente que en las cinco regiones se presentan las mismas tendencias: aumentan en los mismos años y lo mismo sucede cuando disminuye. Si nos fijamos entre 2001 y 2002 existe una maracada disminución y también se vuelve a repetir un decresimiento entre 2016 a 2020. Adémas, durante 2007 ocurre una alza de la tasa, pese a esto no se alcanza el máximo como en un comienzo, para luego esta decaer de nuevo.</p>
+<p>Estas dos tendencias las podemos atribuir a cronológicamente a los hechos: durante el primer periodo marcado el mundo estaba en guerra contra el terrorismo, luego en 2016 ocurrió una crisis política a causa de la mandataria surcoreana, para despues comenzar la tensión política entre EE.&nbsp;UU. y Corea del Norte debido a la contraposición entre sus presidentes por una supuesta guerra nuclear que se especulaba y finalmente la pandemia que inicio en 2019. Una posible interpretación de los resultados anteriores es que en situaciones o periodos donde se presenta la incertidumbre mundial sobre el futuro provocarán que menos mujeres se sientan seguras para ser madres</p>
+<p>De esta forma, también se puede estudiar la tasa de fallecimiento en la misma población y qué puede traer consigo, tal como se analizó anteriormente. A continuación, se presenta el gráfico 2:</p>
+</section>
+<section id="gráfico-2" class="level6">
+<h6 class="anchored" data-anchor-id="gráfico-2">Gráfico 2</h6>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Reporte_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Al observar el comportamiento de la tasa en las cinco regiones se puede decir que desde el año 2004 en adelante este índice aumenta considerablemente y destaca en los últimos años donde está presente un peak de crecimiento.</p>
+<p>Es importante destacar que la región con mayor tasa de fallecimientos corresponde a Busan, siendo la segunda ciudad con mayor población.</p>
+<p>Frente a la representación e información de hechos internos del país, durante 2004 la cifra de suicidios creció considerablemente en los jóvenes, y empieza a ser más común que la causa de muerte entre los habitantes del país sea el cáncer. Y durante el trascurso de los años la población se concentra en adultos entre 30 y 45 años. Además, la pandemia global que se vive durante el 2019 y hasta hoy aumentó la tasa.</p>
+<p>Con esto es posible relacionar la causa y efecto frente a los antecedentes internos del territorio ocurridos en los últimos 22 años, que se ve con una alteración en la demografía. Primero se enlaza que comenzará a crecer durante el año 2004 por el aumento de muertes de jóvenes, luego que a más adultos fueran afectados por el cáncer y finalmente el peak fuera provocado por el COVID-19 donde no había control de la enfermedad.</p>
+<p>Por consiguiente, podemos hacer el estudio del crecimiento natural, representado por el siguiente gráfico 3:</p>
+</section>
+<section id="gráfico-3" class="level6">
+<h6 class="anchored" data-anchor-id="gráfico-3">Gráfico 3</h6>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Reporte_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Al percibir la conducta de la tasa en la representación, esta sí, desde su comienzo hasta su fin tiene un notable cambio, ya que la cifra de la tasa termina siendo negativa, donde era positiva. Es por esto que durante la marcha del tiempo se presenciaron más muertes que nacimientos en Corea del Sur.</p>
+<p>Frente a esto, al recolectar información de hechos, tanto externos como internos, que podrían haber interferido en esto, se puede comentar que algunas de las causas de esto son: en primer lugar que existió un cambio desde 2016 (donde aproximadamente comienza su descenso), el cual se puede relacionar con el cambio de conciencia en la sociedad con respecto a no tener hijos; y en segundo lugar, que se relaciona con la causa anterior, es la incertidumbre que comienza a aumentar por las relaciones tensas entre países, como USA con Corea del Norte y problemas globales económicos.</p>
+<p>A diferencia de lo anterior, se estudia también la tasa de divorcios en estas regiones, como se ve en el gráfico que sigue.</p>
+</section>
+<section id="gráfico-4" class="level6">
+<h6 class="anchored" data-anchor-id="gráfico-4">Gráfico 4</h6>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Reporte_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>En este gráfico la tasa que lidera es la de la ciudad de Incheon en los 22 años.</p>
+<p>Si hacemos una descripción sobre el comportamiento global de la tasa, esta aumento desde el año 2000, tuvo su mayor valor en 2003 para luego disminuir hasta 2022 donde no se vio otro aumento, incluso en este último año es donde alcanza el valor mínimo.</p>
+<p>Durante el año 2003 se presenció el valor máximo de esta tasa, pues, esto se puede atribuir a que en este año se realizaron las negociaciones entre potencias, incluyendo a Corea del Sur, con tal de mejorar la relación entre las Coreas, lo cual no tuvo un buen desenlace provocando incertidumbre del futuro. Por lo que se puede concluir que frente a esto, muchas familias decidieron tomar rumbos distintos para un futuro con menos dependencia familiar.</p>
+<p>Siguiendo la misma línea de estudio, el siguiente gráfico representa lo contrario a lo de antes, es decir, la tasa de casamientos.</p>
+</section>
+<section id="gráfico-5" class="level6">
+<h6 class="anchored" data-anchor-id="gráfico-5">Gráfico 5</h6>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Reporte_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Para esta representación se puede ver que evoluciona de manera decreciente en la cifra de la tasa, no existe la presencia de fuertes amentos o disminución.</p>
+<p>Este progreso se puede enlazar que en los 22 años la sociedad surcoreana ha cambiado, ya que menos personas se casan en los últimos años (a contar de 2012), cabe destacar que era muy común que las familias arreglaran matrimonios y obligaran a casarse a parejas tanto por la religión católica como de otra creencia, por lo que existe más conciencia de rechazo al matrimonio e ir en contra de esto.</p>
+<p>En este caso, no existe un hecho histórico que haya provocado esta conducta para este caso, sino que una evolución de la sociedad.</p>
+<p>Como vimos anterioremente, se puede ver un análisis durante los últimos 22 años sobre qué ha pasado en al demografía de Corea y su variación. Pero ¿Cómo se vio afectado este país socialmente durante la pandemia?¿Habrá afectado como lo hizo en otros países con los número de nacimientos y muertes? Para responder esta pregunta, mostraremos una tabla que incluye el promedio de cada una de las tasas en el correspondiente año por cada región de Corea.</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="jwatwfckwp" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#jwatwfckwp) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: smaller;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#jwatwfckwp) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#jwatwfckwp) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#jwatwfckwp) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#jwatwfckwp) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#jwatwfckwp) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#jwatwfckwp) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: smaller;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#jwatwfckwp) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: smaller;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#jwatwfckwp) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#jwatwfckwp) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#jwatwfckwp) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#jwatwfckwp) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #FFFFFF;
+  background-color: #999999;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#jwatwfckwp) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #FFFFFF;
+  background-color: #999999;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#jwatwfckwp) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#jwatwfckwp) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#jwatwfckwp) .gt_row {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#jwatwfckwp) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#jwatwfckwp) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#jwatwfckwp) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#jwatwfckwp) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#jwatwfckwp) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#jwatwfckwp) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#jwatwfckwp) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#jwatwfckwp) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#jwatwfckwp) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#jwatwfckwp) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#jwatwfckwp) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#jwatwfckwp) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#jwatwfckwp) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#jwatwfckwp) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#jwatwfckwp) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#jwatwfckwp) .gt_left {
+  text-align: left;
+}
+
+:where(#jwatwfckwp) .gt_center {
+  text-align: center;
+}
+
+:where(#jwatwfckwp) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#jwatwfckwp) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#jwatwfckwp) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#jwatwfckwp) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#jwatwfckwp) .gt_super {
+  font-size: 65%;
+}
+
+:where(#jwatwfckwp) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#jwatwfckwp) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#jwatwfckwp) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#jwatwfckwp) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#jwatwfckwp) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#jwatwfckwp) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#jwatwfckwp) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <td colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Tasas durante la pandemia en regiones de Corea del Sur</td>
+    </tr>
+    
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col"></th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="5" scope="colgroup">
+        <span class="gt_column_spanner">Tasas</span>
+      </th>
+    </tr>
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Nacimientos</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Fallecimientos</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Divorcios</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Casamientos</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Crecimientos_natural</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <td colspan="6" class="gt_group_heading">Seoul</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_right gt_stub">2019</th>
+<td class="gt_row gt_right">5.61</td>
+<td class="gt_row gt_right">4.58</td>
+<td class="gt_row gt_right">1.78</td>
+<td class="gt_row gt_right">5.03</td>
+<td class="gt_row gt_right">1.03</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2020</th>
+<td class="gt_row gt_right">4.97</td>
+<td class="gt_row gt_right">4.78</td>
+<td class="gt_row gt_right">1.71</td>
+<td class="gt_row gt_right">4.71</td>
+<td class="gt_row gt_right">0.20</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2021</th>
+<td class="gt_row gt_right">4.80</td>
+<td class="gt_row gt_right">5.17</td>
+<td class="gt_row gt_right">1.58</td>
+<td class="gt_row gt_right">3.91</td>
+<td class="gt_row gt_right">-0.34</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2022</th>
+<td class="gt_row gt_right">4.70</td>
+<td class="gt_row gt_right">6.18</td>
+<td class="gt_row gt_right">1.42</td>
+<td class="gt_row gt_right">3.70</td>
+<td class="gt_row gt_right">-1.52</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="6" class="gt_group_heading">Busan</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_right gt_stub">2019</th>
+<td class="gt_row gt_right">5.04</td>
+<td class="gt_row gt_right">6.58</td>
+<td class="gt_row gt_right">2.01</td>
+<td class="gt_row gt_right">4.08</td>
+<td class="gt_row gt_right">-1.54</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2020</th>
+<td class="gt_row gt_right">4.49</td>
+<td class="gt_row gt_right">6.82</td>
+<td class="gt_row gt_right">1.93</td>
+<td class="gt_row gt_right">3.59</td>
+<td class="gt_row gt_right">-2.35</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2021</th>
+<td class="gt_row gt_right">4.31</td>
+<td class="gt_row gt_right">7.03</td>
+<td class="gt_row gt_right">1.89</td>
+<td class="gt_row gt_right">3.32</td>
+<td class="gt_row gt_right">-2.71</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2022</th>
+<td class="gt_row gt_right">4.50</td>
+<td class="gt_row gt_right">8.83</td>
+<td class="gt_row gt_right">1.65</td>
+<td class="gt_row gt_right">3.28</td>
+<td class="gt_row gt_right">-4.35</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="6" class="gt_group_heading">Incheon</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_right gt_stub">2019</th>
+<td class="gt_row gt_right">6.33</td>
+<td class="gt_row gt_right">5.17</td>
+<td class="gt_row gt_right">2.44</td>
+<td class="gt_row gt_right">4.58</td>
+<td class="gt_row gt_right">1.16</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2020</th>
+<td class="gt_row gt_right">5.49</td>
+<td class="gt_row gt_right">5.37</td>
+<td class="gt_row gt_right">2.37</td>
+<td class="gt_row gt_right">3.97</td>
+<td class="gt_row gt_right">0.12</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2021</th>
+<td class="gt_row gt_right">5.12</td>
+<td class="gt_row gt_right">5.64</td>
+<td class="gt_row gt_right">2.32</td>
+<td class="gt_row gt_right">3.72</td>
+<td class="gt_row gt_right">-0.52</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2022</th>
+<td class="gt_row gt_right">5.12</td>
+<td class="gt_row gt_right">6.87</td>
+<td class="gt_row gt_right">1.98</td>
+<td class="gt_row gt_right">3.58</td>
+<td class="gt_row gt_right">-1.75</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="6" class="gt_group_heading">Daegu</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_right gt_stub">2019</th>
+<td class="gt_row gt_right">5.43</td>
+<td class="gt_row gt_right">5.65</td>
+<td class="gt_row gt_right">1.92</td>
+<td class="gt_row gt_right">4.07</td>
+<td class="gt_row gt_right">-0.22</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2020</th>
+<td class="gt_row gt_right">4.63</td>
+<td class="gt_row gt_right">5.99</td>
+<td class="gt_row gt_right">1.81</td>
+<td class="gt_row gt_right">3.46</td>
+<td class="gt_row gt_right">-1.36</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2021</th>
+<td class="gt_row gt_right">4.47</td>
+<td class="gt_row gt_right">6.08</td>
+<td class="gt_row gt_right">1.73</td>
+<td class="gt_row gt_right">3.06</td>
+<td class="gt_row gt_right">-1.63</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2022</th>
+<td class="gt_row gt_right">4.48</td>
+<td class="gt_row gt_right">7.87</td>
+<td class="gt_row gt_right">1.55</td>
+<td class="gt_row gt_right">3.12</td>
+<td class="gt_row gt_right">-3.38</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="6" class="gt_group_heading">Daejeon</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_right gt_stub">2019</th>
+<td class="gt_row gt_right">5.72</td>
+<td class="gt_row gt_right">5.10</td>
+<td class="gt_row gt_right">2.11</td>
+<td class="gt_row gt_right">4.48</td>
+<td class="gt_row gt_right">0.62</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2020</th>
+<td class="gt_row gt_right">5.12</td>
+<td class="gt_row gt_right">5.19</td>
+<td class="gt_row gt_right">2.06</td>
+<td class="gt_row gt_right">4.10</td>
+<td class="gt_row gt_right">-0.05</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2021</th>
+<td class="gt_row gt_right">5.11</td>
+<td class="gt_row gt_right">5.47</td>
+<td class="gt_row gt_right">1.91</td>
+<td class="gt_row gt_right">3.73</td>
+<td class="gt_row gt_right">-0.35</td></tr>
+    <tr><th scope="row" class="gt_row gt_right gt_stub">2022</th>
+<td class="gt_row gt_right">5.33</td>
+<td class="gt_row gt_right">6.68</td>
+<td class="gt_row gt_right">1.68</td>
+<td class="gt_row gt_right">3.93</td>
+<td class="gt_row gt_right">-1.35</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="6">Fuente: elaboración propia a partir de datos disponibles en Kaggle</td>
+    </tr>
+  </tfoot>
+  
+</table>
+</div>
+</div>
+</div>
+<p>Con la tabla podemos notar que en algunas regiones existe mayor variación que en otras, donde netamente es por el tamaño de la población en cada una.</p>
+<p>Se puede analizar que a todas les afecto de manera negativa, sobre todo en la tasa de crecimiento natural, la cual se puede decir que el número de fallecimientos fue superior frente a la natalidad para las cinco regiones donde en cada cifra final terminó negativa. En el caso de la tasa de nacimiento, esta no varió significativamente su valor en este periodo en las ciudades, por lo que se puede concluir que ya las personas no decidían tener hijos. En el caso de la tasa de fallecimientos en la ciudad de Daegu, varió considerablemente frente a las otras, pero aun así cambió su valor, aumentando el caso de difuntos en este período por el descontrol de la enfermedad.</p>
+<p>Con respecto a la tasa de casamientos y divorcios, se puede generalmente concluir que durante este período, estas no fueron afectadas de manera considerable como la tasa de fallecimiento y crecimiento natural, por lo que se puede ultimar que estas tasas no fueron relevantes frente a la pandemia.</p>
+</section>
+</section>
+</section>
+<section id="conclusión" class="level1">
+<h1>Conclusión</h1>
+<p>Como se expuso durante el desarrollo del reporte, los acontecimientos, tanto internos de un país como externos o mundiales, afectan o repercuten en la demográfica de un territorio, siempre cuando este hecho sea relévate, como por ejemplo una crisis económica o política.</p>
+<p>Frente a los datos y resultados, se nos es factible concluir que en el momento que ocurre un hecho como a nivel región como de magnitud global afectará no solo a la organización del país, sino que también se comportará la sociedad y la toma de decisiones se vera alterada. En consecuencia, tomando como referencia a esta potencia nos lleva a que se puede tomar lo anterior para evaluar el comportamiento de su sociedad.</p>
+<p>Al considerar la evolución de cada una de las tasas, es probable que en algunos años más sean muy distintas a lo que se vio durante los últimos 22 años, por lo que sería interesante y de importancia ver como otros hecho afectan a esta potencia mundial que por hoy sigue liderando con su desempeñó económico. Con esto también se podrían agregar nuevas tasas que son influyentes en la nación, como: promedio de edad de la población, desempleo, sueldo mínimo, entre otras, para conocer su conducta frente a algún hecho relevante.</p>
+</section>
+<section id="referencias" class="level1">
+<h1>Referencias</h1>
+<ul>
+<li><p>Colaboradores de Wikipedia. (2022, 8 noviembre). <em>Historia de Corea del Sur</em>. Wikipedia, la enciclopedia libre. https://es.wikipedia.org/wiki/Historia_de_Corea_del_Sur</p></li>
+<li><p>Colaboradores de Wikipedia. (2022b, noviembre 24). <em>Corea del Sur</em>. Wikipedia, la enciclopedia libre. https://es.wikipedia.org/wiki/Corea_del_Sur</p></li>
+<li><p><em>Corea del Sur: Economía y demografía 2022</em>. (s.&nbsp;f.). Datosmacro.com. https://datosmacro.expansion.com/paises/corea-del-sur</p></li>
+<li><p>SaKong, I. &amp; Koh, Y. (Eds.). (2018). <em>La economíacoreana Seis décadas de crecimiento y desarrollo</em>.</p></li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
